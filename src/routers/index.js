@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 function Router({ isLoggedIn }) {
   return (
       
-    <Stack.Navigator>
+    <Stack.Navigator headerMode="none">
       {isLoggedIn ? (
         <>
         {/* kullanıcı girisi olmadıgında gozukecek componentler buraya eklenıcek */}
@@ -30,6 +30,6 @@ function Router({ isLoggedIn }) {
 }
 
 const mapStateToProps = ({ authentication }) => ({
-    isLoggedIn: authentication.token,
+    isLoggedIn: true,
 });
 export default connect(mapStateToProps)(Router);
