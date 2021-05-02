@@ -1,4 +1,4 @@
-import { TextInput } from 'react-native';
+import { Input as TextInput} from 'react-native-elements';
 import styled from 'styled-components/native';
 import {
   compose,

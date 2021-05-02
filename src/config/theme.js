@@ -5,7 +5,6 @@ const space = []
 const colors = {
     dark:"#000",
     white:"#FFF",
-    rumeysa:"green", //keyleri sayfa içerisinde kullanınca renkler otomatik olarak geliyor.
     tomato:"red",
     gray:"#555"
 }

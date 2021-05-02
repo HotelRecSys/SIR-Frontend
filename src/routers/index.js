@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import {
   SignIn,
+  SplashScreen,
 } from '../screens';
 import TabNavigator from './Tabs';
 
@@ -13,10 +14,10 @@ function Router({ isLoggedIn }) {
   return (
       
     <Stack.Navigator headerMode="none">
-      {isLoggedIn ? (
+      {!isLoggedIn ? (
         <>
         {/* kullanıcı girisi olmadıgında gozukecek componentler buraya eklenıcek */}
-          <Stack.Screen name="SignIn" component={SignIn} />
+          <Stack.Screen name="SplashScreen" component={SplashScreen} />
         </>
       ) : (
         <>

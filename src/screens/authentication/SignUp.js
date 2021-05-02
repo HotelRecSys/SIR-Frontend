@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Text,
   Box,
@@ -12,17 +12,19 @@ import { ScrollView } from "react-native-gesture-handler";
 const { height } = Dimensions.get("window");
 
 const sheetRef = React.createRef();
+const inputPassRef = React.createRef(null);
+const emailRef = React.createRef(null);
+
+function SignUp({ isOpen, setOpen, setSignInOpen }) {
 
 
-function SignIn({ isOpen, setOpen, setSignUpOpen }) {
- 
   useEffect(() => {
     sheetRef.current.snapTo(0);
   }, [isOpen]);
 
   const Content = () => {
-    const [values, setValues] = useState({ email: '', password: '' });
-    const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [emailError, setEmailError] = useState({
       renderErrorMessage: false,
       errorMessage: "",
@@ -31,16 +33,15 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
       renderErrorMessage: false,
       errorMessage: "",
     });
-     
-
-    return(
+    const [showPassword, setShowPassword] = useState(false);
+    return (
     <Box flex={1} bg="white" height={height} px={25}>
       <Box mb={35}>
         <Text mb={10} fontSize={20} color="#191B32" fontWeight="bold">
-          Welcome SIR Hotel App
+          Create an account
         </Text>
         <Text fontSize={15} color="#AFA5AD" fontWeight={500}>
-          Sign in to continue
+          Start to explore hotels with us
         </Text>
       </Box>
       <Box flexDirection="row" alignItems="center">
@@ -57,8 +58,8 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
           renderErrorMessage={emailError.renderErrorMessage}
           errorMessage={emailError.errorMessage}
           leftIcon={<FontAwesomeIcon icon="at" size={20} color="#A9B9CD" />}
-          value={values.email}
-          onChangeText={(text) => setValues({ ...values, email: text })}
+          value={email}
+          onChangeText={(text) => setEmail(text)}
         />
       </Box>
 
@@ -88,8 +89,8 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
           errorStyle={{ color: "red" }}
           renderErrorMessage={passwordError.renderErrorMessage}
           errorMessage={passwordError.errorMessage}
-          value={values.password}
-          onChangeText={(text) => setValues({ ...values, password: text })}
+          value={password}
+          onChangeText={(text) => setPassword(text)}
         />
       </Box>
       <Button
@@ -99,37 +100,41 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
         style={{ borderColor: "#295BE0", borderRadius: 10 }}
       >
         <Text color="#FFF" fontSize={15} fontWeight={500}>
-          {"Sign In"}
-        </Text>
-      </Button>
-      <Button mt={10} bg="#FFF" p={12}>
-        <Text color="#A9B9CD" fontSize={15} fontWeight={500}>
-          {"Forgot Password ?"}
-        </Text>
-      </Button>
-
-      <Button
-        mt={20}
-        bg="#FFF"
-        py={15}
-        style={{ borderColor: "#295BE0", borderWidth: 1, borderRadius: 10 }}
-        onPress={() => {
-          setOpen(false);
-          setSignUpOpen(true);
-        }}
-      >
-        <Text color="#295BE0" fontSize={15} fontWeight={500}>
           {"Sign Up"}
         </Text>
       </Button>
-    </Box>
-  );}
+      <Box mt={35} flexDirection="row">
+        <Button bg="#FFF" p={12} mr={20}>
+          <Text color="#A9B9CD" fontSize={15} fontWeight={500}>
+            {"Already have an account ?"}
+          </Text>
+        </Button>
 
+        <Button
+          bg="#FFF"
+          py={12}
+          px={60}
+          style={{ borderColor: "#295BE0", borderWidth: 1, borderRadius: 10 }}
+          onPress={() => {
+            setOpen(false);
+            setSignInOpen(true);
+          }}
+        >
+          <Text color="#295BE0" fontSize={15} fontWeight={500}>
+            {"Login"}
+          </Text>
+        </Button>
+      </Box>
+    </Box>
+  );
+}
   return (
     <BottomSheetArea
       sheetRef={sheetRef}
       snapPoints={["40%", "35%", "0"]}
-      onCloseEnd={() => setOpen(false)}
+      onCloseEnd={() => {
+        setOpen(false)
+        setSignInOpen(false)}}
       // header={BottomSheetFilterHeader}
       // headerStyle={{
       //   backgroundColor: colors.primary,
@@ -140,4 +145,4 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
   );
 }
 
-export default SignIn;
+export default SignUp;

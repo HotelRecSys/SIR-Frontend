@@ -17,8 +17,8 @@ import theme from "./src/config/theme";
 // iconları buraya ekleyip daha sonra FontAwesomeIcon olarak kullanıyoruz.
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faUserCircle, faHome, faAt, faLock, faKey } from '@fortawesome/free-solid-svg-icons'
-library.add(fab, faUserCircle, faHome, faAt, faLock, faKey)
+import { faUserCircle, faHome, faAt, faLock, faKey, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+library.add(fab, faUserCircle, faHome, faAt, faLock, faKey,faEye, faEyeSlash)
 
 export default function App() {
   return (

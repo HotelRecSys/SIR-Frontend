@@ -6,7 +6,6 @@ function Home() {
   return (
     <Box
       flex={1}
-      bg="white"
       as={SafeAreaView}
     >
         <Text>{'Welcome'} </Text>

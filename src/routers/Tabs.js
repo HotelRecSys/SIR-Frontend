@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
-import { Home, Profile } from "../screens";
+import { Text, Box } from "../components/base";
+import { Home, Profile, SignIn, SignUp } from "../screens";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const Tab = createBottomTabNavigator();
@@ -20,23 +20,60 @@ function TabNavigator({ visible }) {
 
           if (route.name === "Home") {
             iconName = "home";
-            color = focused ? "black" : "red";
+            color = focused ? "#FFF" : "#C6C2CB";
+          } else if (route.name === "SignIn") {
+            iconName = "user-circle";
+            color = focused ? "#FFF" : "#C6C2CB";
           } else if (route.name === "Profile") {
             iconName = "user-circle";
-            color = focused ? "black" : "red";
+            color = focused ? "#FFF" : "#C6C2CB";
+          } else if (route.name === "SignUp") {
+            iconName = "user-circle";
+            color = focused ? "#FFF" : "#C6C2CB";
           }
 
           // You can return any component that you like here!
-          return <FontAwesomeIcon icon={iconName} size={25} color={color} />;
+          return (
+            <Box
+              bg={focused ? "#295BE0" : "#FFF"}
+              p={10}
+              style={{ borderRadius: 50 }}
+            >
+              <FontAwesomeIcon icon={iconName} size={25} color={color} />
+            </Box>
+          );
         },
+        // tabBarLabel:({ focused, color, size }) =>{
+        //   return <Text mt={-10} mb={10} color="#295BE0">{focused ? route.name : ""} </Text>
+        // }
       })}
       tabBarOptions={{
         keyboardHidesTabBar: true,
-        activeTintColor: "tomato",
-        inactiveTintColor: "gray",
+        activeTintColor: "#2C2F4E",
+        inactiveTintColor: "#fff5",
+        showLabel: false,
+        labelStyle: {
+          fontSize: 13,
+          marginBottom: 5,
+        },
+        style: {
+          height: 85,
+          borderTopRightRadius:35,
+          borderTopLeftRadius:35,
+          shadowColor: "#fff5",
+          shadowOffset: {
+            width: 0,
+            height: 8,
+          },
+          shadowOpacity: 0.07,
+          shadowRadius: 30,
+          elevation: 11,
+        },
       }}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="SignIn" component={SignUp} />
+      <Tab.Screen name="SignUp" component={SignIn} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
