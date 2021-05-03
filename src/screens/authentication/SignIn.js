@@ -5,7 +5,7 @@ import {
   Input,
   Button,
   BottomSheetArea,
-} from "../../components/base";
+} from "../../components";
 import { Dimensions } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ScrollView } from "react-native-gesture-handler";

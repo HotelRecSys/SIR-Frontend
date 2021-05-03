@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Text, Box } from "../components/base";
+import { Text, Box } from "../components";
 import { Home, Profile, SignIn, SignUp } from "../screens";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 

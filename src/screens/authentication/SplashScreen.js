@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Text, Box, Input, Button } from "../../components/base";
+import { Text, Box, Input, Button } from "../../components";
 import { ImageBackground } from "react-native";
 import { SignIn, SignUp } from "../index";
 

@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import BottomSheet from "reanimated-bottom-sheet";
 import { BackHandler, Dimensions } from "react-native";
-import { Box } from ".";
+import { Box } from "..";
 
 const { height } = Dimensions.get("window");
 function BottomSheetArea({
