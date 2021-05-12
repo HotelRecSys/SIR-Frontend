@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { connect } from 'react-redux';
 
 import {
+  Hotels,
   SignIn,
   SplashScreen,
 } from '../screens';
@@ -24,6 +25,7 @@ function Router({ isLoggedIn }) {
         {/* kullanıcı gırısı olduktan sonra eklenıcek component ve routelar */}
         {/* tabbar eklemek için gerekli olan ( dokuman ıcerısınden adım adım gıdılerek yapılabılır) */}
           <Stack.Screen name="Home" component={TabNavigator} /> 
+          <Stack.Screen name="Hotels" component={Hotels} /> 
         </>
       )}
     </Stack.Navigator>

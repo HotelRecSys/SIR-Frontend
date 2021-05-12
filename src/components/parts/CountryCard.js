@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Box, Text } from "../../components";
-
+import React, { useState, useEffect,useNavigation } from "react";
+import { Box, Text,Button } from "../../components";
 import { Image } from "react-native";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const images = {
   eifell: {
@@ -9,18 +9,16 @@ const images = {
   },
 };
 
-function CountryCard({ item }) {
-
+function CountryCard({item, navigation}) {
   return (
     <Box
       bg="white"
-      flexDirection="row"
-      mt={10}
+      mt={15}
       p={10}
       style={{
         borderRadius: 20,
-        borderColor:"#fff",
-        borderWidth:0.5,
+        borderColor: "#fff",
+        borderWidth: 0.5,
         shadowColor: "#fffe",
         shadowOffset: {
           width: 0,
@@ -28,24 +26,35 @@ function CountryCard({ item }) {
         },
         shadowOpacity: 0.07,
         shadowRadius: 30,
-        elevation:0.5,
-     
+        elevation: 0.5,
       }}
     >
-      {item && item.image && (
-        <Image
-          source={images[item.image].uri}
-          style={{ width: 65, height: 65, borderRadius: 10 }}
-        />
-      )}
-      <Box flexDirection="column" ml={15} justifyContent={"center"} >
-        <Text fontSize={18} color="#191B32" fontWeight="bold">
-          {item.country + " Hotels"}
-        </Text>
-        <Text fontSize={16} color="#A9B9CD" mt={3}>
-          {item.hotelCount + " hotels"}
-        </Text>
-      </Box>
+      <Button
+        justifyContent="flex-start"
+        onPress={() =>
+         navigation.navigate("Hotels", {
+            country: item.country,
+            hotelCount: item.hotelCount,
+          })
+        }
+      >
+        <Box flexDirection="row">
+          {item && item.image && (
+            <Image
+              source={images[item.image].uri}
+              style={{ width: 65, height: 65, borderRadius: 10 }}
+            />
+          )}
+          <Box flexDirection="column" ml={15} justifyContent={"center"} flex={1}>
+            <Text fontSize={18} color="#191B32" fontWeight="bold">
+              {item.country + " Hotels"}
+            </Text>
+            <Text fontSize={16} color="#A9B9CD" mt={3}>
+              {item.hotelCount + " hotels"}
+            </Text>
+          </Box>
+        </Box>
+      </Button>
     </Box>
   );
 }
