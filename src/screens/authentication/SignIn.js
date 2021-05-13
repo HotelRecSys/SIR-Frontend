@@ -128,7 +128,7 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
   return (
     <BottomSheetArea
       sheetRef={sheetRef}
-      snapPoints={["40%", "35%", "0"]}
+      snapPoints={["70%", "35%", "0"]}
       onCloseEnd={() => setOpen(false)}
       // header={BottomSheetFilterHeader}
       // headerStyle={{
