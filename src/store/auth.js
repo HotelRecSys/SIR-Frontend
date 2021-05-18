@@ -32,6 +32,9 @@ const authentication = createSlice({
       state.loading = false;
       state.isLoggedIn = false;
     },
+    logoutError: (state, action) => {
+      console.log(action)
+    },
     registerRequest: (state) => {
       state.loading = true;
       state.error = null;
@@ -54,6 +57,7 @@ export const {
   loginReceive,
   loginRequest,
   logoutReceive,
+  logoutError,
   registerFailure,
   registerReceive,
   registerRequest,
@@ -71,7 +75,9 @@ export const login = (userData)  =>
 export const logout = () =>
   apiCallBegan({
     url: "http://0.0.0.0:5000/logout",
+    method: 'GET',
     onSuccess: logoutReceive.type,
+    onError: logoutError.type
   });
 
 export const register = (userData)  => 

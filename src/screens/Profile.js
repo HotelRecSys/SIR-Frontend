@@ -1,17 +1,15 @@
 import React from 'react';
-import { View, StyleSheet, Image, Linking, TouchableOpacity} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Text, Box, BottomSheetArea } from '../components';
+import { StyleSheet, Image} from 'react-native';
+import { Text, Box } from '../components';
 import { LinearGradient } from 'expo-linear-gradient';
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { Title, Card } from 'react-native-paper';
-import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { Title } from 'react-native-paper';
 import { Button } from 'react-native-paper';
-import reducer from '../store/reducer';
+import { logout } from "../store/auth";
+import { connect } from 'react-redux';
 
 
-
-function Profile() {
+function Profile({logout}) {
   const items = [
     {
       name:'Simge Tiraş',
@@ -20,13 +18,13 @@ function Profile() {
     },
   ];
   return (
-    <View style = {styles.root}>
+    <Box style = {styles.root}>
       <LinearGradient 
       colors = {["#295BE0","#859dde"]}
       style ={{height:"30%"}}
       />
 
-      <View alignItems= "center">
+      <Box alignItems= "center">
       {/* <Box
               
               p={10}
@@ -39,23 +37,22 @@ function Profile() {
           source={require('../../assets/profile/ilcun.jpg')}
           
           /> 
-      </View>
-      <View style ={styles.mytext}>
+      </Box>
+      <Box style ={styles.mytext}>
           <Title style= {{textAlign:'center'}}>{items[0].name} </Title>
           <Text style={{marginTop:10}}>{<FontAwesomeIcon icon="map-marker-alt" size={24} color="#A9B9CD" />} {items[0].location}</Text>
           <Text style={{marginTop:10}}>{<FontAwesomeIcon icon="envelope-open" size={24} color="#A9B9CD"/>} {items[0].email}</Text>
-      </View>
+      </Box>
           
     
-      <View style= {{flexDirection: "row", justifyContent:"space-around"}}>
+      <Box style= {{flexDirection: "row", justifyContent:"space-around"}}>
           
-          <TouchableOpacity onPress ={()=> this.logout()} style= {{padding:10, borderRadius:10, justifyContent:"center", alignItems:"center", backgroundColor:"#295BE0", marginTop:20}}>
-       
-          <Text style= {{color:"#fff"}}>{"Logout"}</Text>
-          </TouchableOpacity>
-      </View>
+          <Button onPress ={()=> logout()} style= {{padding:10, borderRadius:10, justifyContent:"center", alignItems:"center", backgroundColor:"#295BE0", marginTop:20}}>
+            <Text style= {{color:"#fff"}}>{"Logout"}</Text>
+          </Button>
+      </Box>
 
-    </View>
+    </Box>
   );
 }
 
@@ -80,4 +77,10 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Profile;
+
+const mapStateToProps = ({ authentication }) => ({
+  isLoggedIn: true,
+});
+
+export default connect(mapStateToProps, {logout})(Profile);
+

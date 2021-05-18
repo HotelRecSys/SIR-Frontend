@@ -11,11 +11,11 @@ import TabNavigator from './Tabs';
 
 const Stack = createStackNavigator();
 
-function Router({ isLoggedIn }) {
+function Router({ isLoggedIn, user }) {
   return (
       
     <Stack.Navigator headerMode="none">
-      {!isLoggedIn ? (
+      {!isLoggedIn && !user ? (
         <>
         {/* kullanıcı girisi olmadıgında gozukecek componentler buraya eklenıcek */}
           <Stack.Screen name="SplashScreen" component={SplashScreen} />
@@ -34,5 +34,6 @@ function Router({ isLoggedIn }) {
 
 const mapStateToProps = ({ authentication }) => ({
     isLoggedIn: authentication.isLoggedIn,
+    user: authentication.user
 });
 export default connect(mapStateToProps)(Router);
