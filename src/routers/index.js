@@ -33,6 +33,6 @@ function Router({ isLoggedIn }) {
 }
 
 const mapStateToProps = ({ authentication }) => ({
-    isLoggedIn: true,
+    isLoggedIn: authentication.isLoggedIn,
 });
 export default connect(mapStateToProps)(Router);

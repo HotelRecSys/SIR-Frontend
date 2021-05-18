@@ -26,18 +26,19 @@ function Profile() {
       style ={{height:"30%"}}
       />
 
-      <View >
-      <Box
+      <View alignItems= "center">
+      {/* <Box
               
               p={10}
               style={{ borderRadius: 50, alignItems: "center" }}
             >
               <FontAwesomeIcon icon="user-circle" size={100}  />
-      </Box>
-          {/* <Image 
+      </Box> */}
+         <Image 
           style= {{width :140, height:140, borderRadius:50, marginTop: -50}}
-          source ={{uri:"https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"}}
-          /> */}
+          source={require('../../assets/profile/ilcun.jpg')}
+          
+          /> 
       </View>
       <View style ={styles.mytext}>
           <Title style= {{textAlign:'center'}}>{items[0].name} </Title>

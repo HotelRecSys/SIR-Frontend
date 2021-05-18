@@ -9,6 +9,8 @@ import {
 import { Dimensions, Modal, StyleSheet, FlatList, TouchableOpacity, View } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import countryList from '../../countries.json';
+import { register } from "../../store/auth";
+import { connect } from 'react-redux';
 
 const { height } = Dimensions.get("window");
 
@@ -16,7 +18,7 @@ const sheetRef = React.createRef();
 const inputPassRef = React.createRef(null);
 const emailRef = React.createRef(null);
 
-function SignUp({ isOpen, setOpen, setSignInOpen }) {
+function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
 
 
   useEffect(() => {
@@ -28,7 +30,7 @@ function SignUp({ isOpen, setOpen, setSignInOpen }) {
     const [password, setPassword] = useState("");
     const [name, setName] = useState("")
     const [modalVisible, setModalVisible] = useState(false);
-    const [country, setCountry] = useState({name:"", flag:"", code:""})
+    const [country, setCountry] = useState({ name: "", flag: "", code: "" })
 
     const [emailError, setEmailError] = useState({
       renderErrorMessage: false,
@@ -40,172 +42,182 @@ function SignUp({ isOpen, setOpen, setSignInOpen }) {
     });
     const [showPassword, setShowPassword] = useState(false);
     return (
-    <Box flex={1} bg="white" height={height} px={25}>
-      <Box mb={35}>
-        <Text mb={10} fontSize={20} color="#191B32" fontWeight="bold">
-          Create an account
+      <Box flex={1} bg="white" height={height} px={25}>
+        <Box mb={35}>
+          <Text mb={10} fontSize={20} color="#191B32" fontWeight="bold">
+            Create an account
         </Text>
-        <Text fontSize={15} color="#AFA5AD" fontWeight={500}>
-          Start to explore hotels with us
+          <Text fontSize={15} color="#AFA5AD" fontWeight={500}>
+            Start to explore hotels with us
         </Text>
-      </Box>
-      <Box flexDirection="row" alignItems="center">
-        <Input
-          p={10}
-          ml={10}
-          flex={1}
-          label="Name Surname"
-          placeholder="Ex:Rümü Arslan"
-          labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
-          inputStyle={{ fontSize: 15, color: "#191B32" }}
-          inputContainerStyle={{ borderColor: "#DCE5EE" }}
-          leftIcon={<FontAwesomeIcon icon="user" size={20} color="#A9B9CD" />}
-          value={name}
-          onChangeText={(text) => setName(text)}
-        />
-      </Box>
-      <Box flexDirection="row" alignItems="center">
-        <Input
-          p={10}
-          ml={10}
-          flex={1}
-          label="Email"
-          placeholder="Ex:sir@gmail.com"
-          labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
-          inputStyle={{ fontSize: 15, color: "#191B32" }}
-          inputContainerStyle={{ borderColor: "#DCE5EE" }}
-          errorStyle={{ color: "red" }}
-          renderErrorMessage={emailError.renderErrorMessage}
-          errorMessage={emailError.errorMessage}
-          leftIcon={<FontAwesomeIcon icon="at" size={20} color="#A9B9CD" />}
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-        />
-      </Box>
-      <Box mt={30} flexDirection="row" alignItems="center">
-        <Input
-          p={10}
-          ml={10}
-          flex={1}
-          label="Password"
-          placeholder="*******"
-          labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
-          inputStyle={{ fontSize: 15, color: "#191B32" }}
-          inputContainerStyle={{ borderColor: "#DCE5EE" }}
-          leftIcon={<FontAwesomeIcon icon="lock" size={20} color="#A9B9CD" />}
-          rightIcon={
-            showPassword ? (
-              <Button onPress={() => setShowPassword(false)}>
-                <FontAwesomeIcon icon="eye-slash" size={20} color="#A9B9CD" />
-              </Button>
-            ) : (
-              <Button onPress={() => setShowPassword(true)}>
-                <FontAwesomeIcon icon="eye" size={20} color="#A9B9CD" />
-              </Button>
-            )
-          }
-          secureTextEntry={!showPassword}
-          errorStyle={{ color: "red" }}
-          renderErrorMessage={passwordError.renderErrorMessage}
-          errorMessage={passwordError.errorMessage}
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-        />
-      </Box>
-      
-      <Text style={{marginTop:20, padding: 10, fontSize: 13, fontWeight: 'bold' ,color: "#A9B9CD",}}>
+        </Box>
+        <Box flexDirection="row" alignItems="center">
+          <Input
+            p={10}
+            ml={10}
+            flex={1}
+            label="Name Surname"
+            placeholder="Ex:Rümü Arslan"
+            labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
+            inputStyle={{ fontSize: 15, color: "#191B32" }}
+            inputContainerStyle={{ borderColor: "#DCE5EE" }}
+            leftIcon={<FontAwesomeIcon icon="user" size={20} color="#A9B9CD" />}
+            value={name}
+            onChangeText={(text) => setName(text)}
+          />
+        </Box>
+        <Box flexDirection="row" alignItems="center">
+          <Input
+            p={10}
+            ml={10}
+            flex={1}
+            label="Email"
+            autoCapitalize="none"
+            placeholder="Ex:sir@gmail.com"
+            labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
+            inputStyle={{ fontSize: 15, color: "#191B32" }}
+            inputContainerStyle={{ borderColor: "#DCE5EE" }}
+            errorStyle={{ color: "red" }}
+            renderErrorMessage={emailError.renderErrorMessage}
+            errorMessage={emailError.errorMessage}
+            leftIcon={<FontAwesomeIcon icon="at" size={20} color="#A9B9CD" />}
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+          />
+        </Box>
+        <Box mt={30} flexDirection="row" alignItems="center">
+          <Input
+            p={10}
+            ml={10}
+            flex={1}
+            label="Password"
+            placeholder="*******"
+            labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
+            inputStyle={{ fontSize: 15, color: "#191B32" }}
+            inputContainerStyle={{ borderColor: "#DCE5EE" }}
+            leftIcon={<FontAwesomeIcon icon="lock" size={20} color="#A9B9CD" />}
+            rightIcon={
+              showPassword ? (
+                <Button onPress={() => setShowPassword(false)}>
+                  <FontAwesomeIcon icon="eye-slash" size={20} color="#A9B9CD" />
+                </Button>
+              ) : (
+                <Button onPress={() => setShowPassword(true)}>
+                  <FontAwesomeIcon icon="eye" size={20} color="#A9B9CD" />
+                </Button>
+              )
+            }
+            secureTextEntry={!showPassword}
+            errorStyle={{ color: "red" }}
+            renderErrorMessage={passwordError.renderErrorMessage}
+            errorMessage={passwordError.errorMessage}
+            value={password}
+            onChangeText={(text) => setPassword(text)}
+          />
+        </Box>
+
+        <Text style={{ marginTop: 20, padding: 10, fontSize: 13, fontWeight: 'bold', color: "#A9B9CD", }}>
           Country
       </Text>
-        
-      <Box>
-       
-        <Modal
-          animationType="fade"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            setModalVisible(!modalVisible);
-          }}
-        >
-          <Box style={styles.centeredView}>
-              <Box style={styles.modalView}>  
-              <FlatList 
+
+        <Box>
+
+          <Modal
+            animationType="fade"
+            transparent={true}
+            visible={modalVisible}
+            onRequestClose={() => {
+              setModalVisible(!modalVisible);
+            }}
+          >
+            <Box style={styles.centeredView}>
+              <Box style={styles.modalView}>
+                <FlatList
                   data={countryList}
-                  renderItem={({item}) => (
-                    <TouchableOpacity 
-                    onPress={ () => {setCountry({...country, name:item.name, flag:item.emoji, code:item.code}), setModalVisible(!modalVisible)}}>
+                  renderItem={({ item }) => (
+                    <TouchableOpacity
+                      onPress={() => { setCountry({ ...country, name: item.name, flag: item.emoji, code: item.code }), setModalVisible(!modalVisible) }}>
                       <View>
                         <Text style={styles.modalText}>{item.emoji} {item.name}</Text>
                       </View>
-                    </TouchableOpacity>  
+                    </TouchableOpacity>
                   )}
                 />
+              </Box>
             </Box>
-          </Box>
-        </Modal>
-        <Button
-          style={{backgroundColor: "#fff",  borderColor: "#DCE5EE", borderBottomWidth: 1, justifyContent: "flex-start",
-          paddingBottom: 15, marginTop: 5, marginLeft: 10, marginRight:10}}
-          onPress={() => setModalVisible(true)}
-        >
-          {<FontAwesomeIcon icon="globe-americas" size={20} color="#A9B9CD" />} 
-          {country.name == '' ? 
-            <Text color="#191B32" pl={20} fontSize={13}>
-             {"Ex: Germany"}
-            </Text>
-            :
-            <Text color="#191B32" pl={20} fontSize={16} fontWeight={500}>
-              {country.name} {country.flag} 
-            </Text>
-          }
-        </Button>
+          </Modal>
+          <Button
+            style={{
+              backgroundColor: "#fff", borderColor: "#DCE5EE", borderBottomWidth: 1, justifyContent: "flex-start",
+              paddingBottom: 15, marginTop: 5, marginLeft: 10, marginRight: 10
+            }}
+            onPress={() => setModalVisible(true)}
+          >
+            {<FontAwesomeIcon icon="globe-americas" size={20} color="#A9B9CD" />}
+            {country.name == '' ?
+              <Text color="#191B32" pl={20} fontSize={13}>
+                {"Ex: Germany"}
+              </Text>
+              :
+              <Text color="#191B32" pl={20} fontSize={16} fontWeight={500}>
+                {country.name} {country.flag}
+              </Text>
+            }
+          </Button>
 
-      </Box>
-
-      
-      <Button
-        mt={20}
-        bg="#295BE0"
-        py={15}
-        style={{ borderColor: "#295BE0", borderRadius: 10 }}
-      >
-        <Text color="#FFF" fontSize={15} fontWeight={500}>
-          {"Sign Up"}
-        </Text>
-      </Button>
-      <Box mt={35} flexDirection="row">
-        <Button bg="#FFF" p={12} mr={20}>
-          <Text color="#A9B9CD" fontSize={15} fontWeight={500}>
-            {"Already have an account ?"}
-          </Text>
-        </Button>
+        </Box>
 
         <Button
-          bg="#FFF"
-          py={12}
-          px={60}
-          style={{ borderColor: "#295BE0", borderWidth: 1, borderRadius: 10 }}
-          onPress={() => {
-            setOpen(false);
-            setSignInOpen(true);
-          }}
+          mt={20}
+          bg="#295BE0"
+          py={15}
+          style={{ borderColor: "#295BE0", borderRadius: 10 }}
+          onPress={() => register({
+            'name': name,
+            'password': password,
+            'country': country.name,
+            'email': email,
+            'image': 'profile.jpeg'
+          })}
         >
-          <Text color="#295BE0" fontSize={15} fontWeight={500}>
-            {"Login"}
+          <Text color="#FFF" fontSize={15} fontWeight={500}>
+            {"Sign Up"}
           </Text>
         </Button>
+        <Box mt={35} flexDirection="row">
+          <Button bg="#FFF" p={12} mr={20}>
+            <Text color="#A9B9CD" fontSize={15} fontWeight={500}>
+              {"Already have an account ?"}
+            </Text>
+          </Button>
+
+          <Button
+            bg="#FFF"
+            py={12}
+            px={35}
+            style={{ borderColor: "#295BE0", borderWidth: 1, borderRadius: 10 }}
+            onPress={() => {
+              setOpen(false);
+              setSignInOpen(true);
+            }}
+          >
+            <Text color="#295BE0" fontSize={15} fontWeight={500}>
+              {"Login"}
+            </Text>
+          </Button>
+        </Box>
+
       </Box>
-      
-    </Box>
-  );
-}
+    );
+  }
   return (
     <BottomSheetArea
       sheetRef={sheetRef}
-      snapPoints={["80%", "35%", "0"]}
+      snapPoints={["70%", "35%", "0"]}
       onCloseEnd={() => {
         setOpen(false)
-        setSignInOpen(false)}}
+        setSignInOpen(false)
+      }}
       // header={BottomSheetFilterHeader}
       // headerStyle={{
       //   backgroundColor: colors.primary,
@@ -237,7 +249,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: '75%',
     height: '75%',
-    
+
   },
   modalText: {
     marginBottom: 15,
@@ -247,4 +259,9 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SignUp;
+const mapStateToProps = ({ authentication }) => ({
+  isLoggedIn: true,
+});
+
+export default connect(mapStateToProps, {register})(SignUp);
+

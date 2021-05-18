@@ -28,43 +28,51 @@ function SplashScreen({ navigation }) {
         )}
         {signUpOpen && (
           <SignUp
-            isOpen={signInOpen}
+            isOpen={signUpOpen}
             setOpen={setSignUpOpen}
             setSignInOpen={setSignInOpen}
           />
         )}
-        <Text
-          ml={20}
-          fontSize={30}
-          color="#FFF"
-          fontWeight={"bold"}>
-          {"SIR HOTELS APP"}
-        </Text>
-        <Box flexDirection="row" justifyContent="space-between">
-          <Button
-            m={15}
-            p={15}
-            width={"40%"}
-            style={{ borderRadius: 25, borderWidth:1.5, borderColor:"#e6ffff"}}
-            onPress={() => setSignInOpen(true)}
-          >
-            <Text color="#FFF" fontSize={15} fontWeight="bold">
-              {"Sign In"}
+        {
+          !signInOpen && !signUpOpen &&
+          <>
+            <Text
+              ml={20}
+              fontSize={30}
+              color="#FFF"
+              fontWeight={"bold"}>
+              {"SIR HOTELS APP"}
             </Text>
-          </Button>
-          <Button
-            m={15}
-            p={15}
-            width={"40%"}
-            style={{
-            borderRadius: 25, borderWidth:1.5, borderColor:"#e6ffff"}}
-            onPress={() => setSignUpOpen(true)}
-          >
-            <Text color="#FFF" fontSize={15} fontWeight="bold">
-              {"Sign Up"}
-            </Text>
-          </Button>
-        </Box>
+            <Box flexDirection="row" justifyContent="space-between">
+              <Button
+                m={15}
+                p={15}
+                width={"40%"}
+                style={{ borderRadius: 25, borderWidth: 1.5, borderColor: "#e6ffff" }}
+                onPress={() => setSignInOpen(true)}
+              >
+                <Text color="#FFF" fontSize={15} fontWeight="bold">
+                  {"Sign In"}
+                </Text>
+              </Button>
+              <Button
+                m={15}
+                p={15}
+                width={"40%"}
+                style={{
+                  borderRadius: 25, borderWidth: 1.5, borderColor: "#e6ffff"
+                }}
+                onPress={() => setSignUpOpen(true)}
+              >
+                <Text color="#FFF" fontSize={15} fontWeight="bold">
+                  {"Sign Up"}
+                </Text>
+              </Button>
+            </Box>
+
+          </>
+        }
+
       </ImageBackground>
     </Box>
   );

@@ -13,6 +13,7 @@ const convertFormData = (data) => {
 
 // eslint-disable-next-line consistent-return
 const api = ({ dispatch, getState }) => (next) => async (action) => {
+
   if (action.type === apiCallFailed.type) {
     const { status } = action.payload;
     // if (status === 401) { dispatch({ type: loggedOut.type }); }
@@ -44,14 +45,13 @@ const api = ({ dispatch, getState }) => (next) => async (action) => {
   next(action);
   try {
     const response = await axios({
-      baseURL: "http://localhost:3100",
+      baseURL: "http://0.0.0.0:5000/",
       // baseURL: API_URL, //domian adresi yukarıdaki import edildiğinde bu çalıştırılacak
       url,
       method,
       data: type === "form-data" ? convertFormData(data) : data,
       params,
       headers: {
-        Authorization: store.auth.token ? `Token ${store.auth.token}` : "",
         "Content-Type": "application/json",
         Accept: "application/json",
       },

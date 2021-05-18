@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ImageBackground } from "react-native";
 
 function HotelCard({ item }) {
-  console.log("ite", item);
   return (
     <Box
       bg="white"

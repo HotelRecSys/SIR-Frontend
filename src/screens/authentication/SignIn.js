@@ -9,12 +9,15 @@ import {
 import { Dimensions } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ScrollView } from "react-native-gesture-handler";
+import { login } from '../../store/auth'
+import { connect } from 'react-redux';
+
 const { height } = Dimensions.get("window");
 
 const sheetRef = React.createRef();
 
 
-function SignIn({ isOpen, setOpen, setSignUpOpen }) {
+function SignIn({ isOpen, setOpen, setSignUpOpen, login}) {
  
   useEffect(() => {
     sheetRef.current.snapTo(0);
@@ -50,6 +53,7 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
           flex={1}
           label="Email"
           placeholder="Ex:sir@gmail.com"
+          autoCapitalize="none"
           labelStyle={{ fontSize: 13, color: "#A9B9CD" }}
           inputStyle={{ fontSize: 15, color: "#191B32" }}
           inputContainerStyle={{ borderColor: "#DCE5EE" }}
@@ -97,6 +101,7 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
         bg="#295BE0"
         py={15}
         style={{ borderColor: "#295BE0", borderRadius: 10 }}
+        onPress={() => login(values)}
       >
         <Text color="#FFF" fontSize={15} fontWeight={500}>
           {"Sign In"}
@@ -140,4 +145,8 @@ function SignIn({ isOpen, setOpen, setSignUpOpen }) {
   );
 }
 
-export default SignIn;
+const mapStateToProps = ({ authentication }) => ({
+  isLoggedIn: true,
+});
+
+export default connect(mapStateToProps, {login})(SignIn);
