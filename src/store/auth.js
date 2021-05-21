@@ -5,7 +5,7 @@ import axios from "axios";
 const authentication = createSlice({
   name: "authentication",
   initialState: {
-    user: [],
+    user: null,
     loading: false,
     error: null,
     message: null,
