@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, Box, CountryCard, Header, PredictCard } from "../components";
+import { connect } from 'react-redux';
 
 const countryList = [
   { country: "Turkey", hotelCount: 150, image: "eifell" },
@@ -240,7 +241,7 @@ const predictData = [
   },
 ];
 
-function Home({navigation}) {
+function Home({ navigation, user }) {
   return (
     <Box
       flex={1}
@@ -250,33 +251,40 @@ function Home({navigation}) {
       px={10}
       forceInset={{ bottom: "never", vertical: "never" }}
     >
-      <Header title={"Welcome"} subtitle={"Simge Tiraş, explore the hotels on the world with us."}/>
+      <ScrollView>
+        <Header
+          title={"Welcome"}
+          subtitle={`${user?.name || 'Simge Tiraş'}, explore the hotels on the world with us.`}
+        />
 
-      <Box  mx={15} >
-        <Text fontSize={24} color="#191B32" mt={15} fontWeight="bold">
-          {"For you"}
-        </Text>
-        <ScrollView
-        horizontal>
-          {predictData.map((item, index) => (
+        <Box mx={15}>
+          <Text fontSize={24} color="#191B32" mt={15} fontWeight="bold">
+            {"For you"}
+          </Text>
+          <ScrollView horizontal>
+            {predictData.map((item, index) => (
               <PredictCard item={item} key={index} navigation={navigation} />
-          ))}
-        </ScrollView>
-      </Box>
+            ))}
+          </ScrollView>
+        </Box>
 
+        <Box flex={1} mx={15}>
+          <Text fontSize={24} color="#191B32" mt={10} fontWeight="bold">
+            {"Countries"}
+          </Text>
 
-      <Box flex={1} mx={15}>
-        <Text fontSize={24} color="#191B32" mt={10} fontWeight="bold">
-          {"Countries"}
-        </Text>
-        <ScrollView>
           {countryList.map((item, index) => (
-              <CountryCard item={item} key={index} navigation={navigation} />
+            <CountryCard item={item} key={index} navigation={navigation} />
           ))}
-        </ScrollView>
-      </Box>
+        </Box>
+      </ScrollView>
     </Box>
   );
 }
 
-export default Home;
+const mapStateToProps = ({ authentication }) => ({
+  user : authentication.user,
+});
+
+export default connect(mapStateToProps, {})(Home);
+
