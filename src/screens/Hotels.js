@@ -228,7 +228,7 @@ const data = [
     img: "https://cf.bstatic.com/images/hotel/max1024x768/265/265606419.jpg",
   },
 ];
-function Hotels({ route }) {
+function Hotels({ route, navigation }) {
   const { country, hotelCount } = route.params;
   return (
     <Box
@@ -241,7 +241,7 @@ function Hotels({ route }) {
       <Box flex={1} mx={15}>
         <ScrollView>
           {country === "France" ? (
-            data.map((item, index) => <HotelCard item={item} key={index} />)
+            data.map((item, index) => <HotelCard item={item} key={index} navigation={navigation} />)
           ) : (
             <Box my={"50%"} alignItems="center" ><Text color="red" style={{fontSize:30}} 
             >{"No hotel data"}</Text></Box>

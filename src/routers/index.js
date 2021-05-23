@@ -6,6 +6,7 @@ import {
   Hotels,
   SignIn,
   SplashScreen,
+  HotelInfo,
 } from '../screens';
 import TabNavigator from './Tabs';
 
@@ -26,6 +27,7 @@ function Router({ isLoggedIn, user }) {
         {/* tabbar eklemek için gerekli olan ( dokuman ıcerısınden adım adım gıdılerek yapılabılır) */}
           <Stack.Screen name="Home" component={TabNavigator} /> 
           <Stack.Screen name="Hotels" component={Hotels} /> 
+          <Stack.Screen name="HotelInfo" component={HotelInfo} /> 
         </>
       )}
     </Stack.Navigator>

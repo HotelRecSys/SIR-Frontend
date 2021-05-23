@@ -5,7 +5,7 @@ import { Image, Platform } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ImageBackground } from "react-native";
 
-function HotelCard({ item }) {
+function HotelCard({ item, navigation }) {
   return (
     <Box
       bg="white"
@@ -28,11 +28,11 @@ function HotelCard({ item }) {
       <Button
         justifyContent="flex-start"
         onPress={() =>
-          navigation.navigate("Hotels", {
-            country: item.country,
-            hotelCount: item.hotelCount,
-          })
-        }
+          navigation.navigate("HotelInfo", {
+             country: item.country,
+             hotelCount: item.hotelCount,
+           })
+         }
       >
         <Box flexDirection="column" flex={1}>
           {item && item.img && (
