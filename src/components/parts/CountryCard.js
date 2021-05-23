@@ -3,12 +3,6 @@ import { Box, Text,Button } from "../../components";
 import { Image } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
-const images = {
-  eifell: {
-    uri: require("../../../assets/countries/eifell.png"),
-  },
-};
-
 function CountryCard({item, navigation}) {
   return (
     <Box
@@ -33,24 +27,24 @@ function CountryCard({item, navigation}) {
         justifyContent="flex-start"
         onPress={() =>
          navigation.navigate("Hotels", {
-            country: item.country,
-            hotelCount: item.hotelCount,
+            country: item.name,
+            hotelCount: item.otelCount,
           })
         }
       >
         <Box flexDirection="row">
-          {item && item.image && (
+          {item && (
             <Image
-              source={images[item.image].uri}
+              source={require('../../../assets/countries/eifell.png')}
               style={{ width: 65, height: 65, borderRadius: 10 }}
             />
           )}
           <Box flexDirection="column" ml={15} justifyContent={"center"} flex={1}>
             <Text fontSize={18} color="#191B32" fontWeight="bold">
-              {item.country + " Hotels"}
+              {item.name + " Hotels"}
             </Text>
             <Text fontSize={16} color="#A9B9CD" mt={3}>
-              {item.hotelCount + " hotels"}
+              {item.otelCount + " hotels"}
             </Text>
           </Box>
         </Box>

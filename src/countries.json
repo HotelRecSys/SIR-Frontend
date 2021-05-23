@@ -4,1159 +4,1161 @@
         "emoji": "🇦🇩",
         "unicode": "U+1F1E6 U+1F1E9",
         "name": "Andorra",
-        "dialCode": "+376"
+        "otelCount": 165
     },
     {
         "code": "AI",
         "emoji": "🇦🇮",
         "unicode": "U+1F1E6 U+1F1EE",
         "name": "Anguilla",
-        "dialCode": "+1 264"
+        "otelCount": 6
     },
     {
         "code": "AL",
         "emoji": "🇦🇱",
         "unicode": "U+1F1E6 U+1F1F1",
         "name": "Albania",
-        "dialCode": "+355"
+        "otelCount": 1043
     },
     {
         "code": "AR",
         "emoji": "🇦🇷",
         "unicode": "U+1F1E6 U+1F1F7",
         "name": "Argentina",
-        "dialCode": "+54"
+        "otelCount": 2346
     },
     {
         "code": "AT",
         "emoji": "🇦🇹",
         "unicode": "U+1F1E6 U+1F1F9",
         "name": "Austria",
-        "dialCode": "+43"
+        "otelCount": 3898
     },
     {
         "code": "AU",
         "emoji": "🇦🇺",
         "unicode": "U+1F1E6 U+1F1FA",
         "name": "Australia",
-        "dialCode": "+61"
+        "otelCount": 3186
     },
     {
         "code": "AW",
         "emoji": "🇦🇼",
         "unicode": "U+1F1E6 U+1F1FC",
         "name": "Aruba",
-        "dialCode": "+297"
+        "otelCount": 49
     },
     {
         "code": "AZ",
         "emoji": "🇦🇿",
         "unicode": "U+1F1E6 U+1F1FF",
         "name": "Azerbaijan",
-        "dialCode": "+994"
+        "otelCount": 230
     },
     {
         "code": "BA",
         "emoji": "🇧🇦",
         "unicode": "U+1F1E7 U+1F1E6",
         "name": "Bosnia and Herzegovina",
-        "dialCode": "+387"
+        "otelCount": 360
     },
     {
         "code": "BB",
         "emoji": "🇧🇧",
         "unicode": "U+1F1E7 U+1F1E7",
         "name": "Barbados",
-        "dialCode": "+1 246"
+        "otelCount": 50
     },
     {
         "code": "BD",
         "emoji": "🇧🇩",
         "unicode": "U+1F1E7 U+1F1E9",
         "name": "Bangladesh",
-        "dialCode": "+880"
+        "otelCount": 232
     },
     {
         "code": "BE",
         "emoji": "🇧🇪",
         "unicode": "U+1F1E7 U+1F1EA",
         "name": "Belgium",
-        "dialCode": "+32"
+        "otelCount": 1403
     },
     {
         "code": "BF",
         "emoji": "🇧🇫",
         "unicode": "U+1F1E7 U+1F1EB",
         "name": "Burkina Faso",
-        "dialCode": "+226"
+        "otelCount": 27
     },
     {
         "code": "BG",
         "emoji": "🇧🇬",
         "unicode": "U+1F1E7 U+1F1EC",
         "name": "Bulgaria",
-        "dialCode": "+359"
+        "otelCount": 2221
     },
     {
         "code": "BH",
         "emoji": "🇧🇭",
         "unicode": "U+1F1E7 U+1F1ED",
         "name": "Bahrain",
-        "dialCode": "+973"
+        "otelCount": 95
     },
     {
         "code": "BI",
         "emoji": "🇧🇮",
         "unicode": "U+1F1E7 U+1F1EE",
         "name": "Burundi",
-        "dialCode": "+257"
+        "otelCount": 16
     },
     {
         "code": "BM",
         "emoji": "🇧🇲",
         "unicode": "U+1F1E7 U+1F1F2",
         "name": "Bermuda",
-        "dialCode": "+1 441"
+        "otelCount": 6
     },
     {
         "code": "BO",
         "emoji": "🇧🇴",
         "unicode": "U+1F1E7 U+1F1F4",
         "name": "Bolivia",
-        "dialCode": "+591"
+        "otelCount": 313
     },
     {
         "code": "BR",
         "emoji": "🇧🇷",
         "unicode": "U+1F1E7 U+1F1F7",
         "name": "Brazil",
-        "dialCode": "+55"
+        "otelCount": 5362
     },
     {
         "code": "BS",
         "emoji": "🇧🇸",
         "unicode": "U+1F1E7 U+1F1F8",
         "name": "Bahamas",
-        "dialCode": "+1 242"
+        "otelCount": 35
     },
     {
         "code": "BT",
         "emoji": "🇧🇹",
         "unicode": "U+1F1E7 U+1F1F9",
         "name": "Bhutan",
-        "dialCode": "+975"
+        "otelCount": 30
     },
     {
         "code": "BW",
         "emoji": "🇧🇼",
         "unicode": "U+1F1E7 U+1F1FC",
         "name": "Botswana",
-        "dialCode": "+267"
+        "otelCount": 47
     },
     {
         "code": "BY",
         "emoji": "🇧🇾",
         "unicode": "U+1F1E7 U+1F1FE",
         "name": "Belarus",
-        "dialCode": "+375"
+        "otelCount": 289
     },
     {
         "code": "BZ",
         "emoji": "🇧🇿",
         "unicode": "U+1F1E7 U+1F1FF",
         "name": "Belize",
-        "dialCode": "+501"
+        "otelCount": 112
     },
     {
         "code": "CA",
         "emoji": "🇨🇦",
         "unicode": "U+1F1E8 U+1F1E6",
         "name": "Canada",
-        "dialCode": "+1"
+        "otelCount": 3049
     },
     {
         "code": "CH",
         "emoji": "🇨🇭",
         "unicode": "U+1F1E8 U+1F1ED",
         "name": "Switzerland",
-        "dialCode": "+41"
+        "otelCount": 2718
     },
     {
         "code": "CI",
         "emoji": "🇨🇮",
         "unicode": "U+1F1E8 U+1F1EE",
         "name": "Ivory Coast",
-        "dialCode": "+225"
+        "otelCount": 97
     },
     {
         "code": "CK",
         "emoji": "🇨🇰",
         "unicode": "U+1F1E8 U+1F1F0",
         "name": "Cook Islands",
-        "dialCode": "+682"
+        "otelCount": 6
     },
     {
         "code": "CL",
         "emoji": "🇨🇱",
         "unicode": "U+1F1E8 U+1F1F1",
         "name": "Chile",
-        "dialCode": "+56"
+        "otelCount": 940
     },
     {
         "code": "CN",
         "emoji": "🇨🇳",
         "unicode": "U+1F1E8 U+1F1F3",
         "name": "China",
-        "dialCode": "+86"
+        "otelCount": 2518
     },
     {
         "code": "CO",
         "emoji": "🇨🇴",
         "unicode": "U+1F1E8 U+1F1F4",
         "name": "Colombia",
-        "dialCode": "+57"
+        "otelCount": 2914
     },
     {
         "code": "CR",
         "emoji": "🇨🇷",
         "unicode": "U+1F1E8 U+1F1F7",
         "name": "Costa Rica",
-        "dialCode": "+506"
+        "otelCount": 948
     },
     {
         "code": "CU",
         "emoji": "🇨🇺",
         "unicode": "U+1F1E8 U+1F1FA",
         "name": "Cuba",
-        "dialCode": "+53"
+        "otelCount": 49
     },
     {
         "code": "CV",
         "emoji": "🇨🇻",
         "unicode": "U+1F1E8 U+1F1FB",
         "name": "Cape Verde",
-        "dialCode": "+238"
+        "otelCount": 69
     },
     {
         "code": "CW",
         "emoji": "🇨🇼",
         "unicode": "U+1F1E8 U+1F1FC",
-        "name": "Curaçao"
+        "name": "Curaçao",
+        "otelCount": 41
     },
     {
         "code": "CY",
         "emoji": "🇨🇾",
         "unicode": "U+1F1E8 U+1F1FE",
         "name": "Cyprus",
-        "dialCode": "+537"
+        "otelCount": 484
     },
     {
         "code": "CZ",
         "emoji": "🇨🇿",
         "unicode": "U+1F1E8 U+1F1FF",
         "name": "Czech Republic",
-        "dialCode": "+420"
+        "otelCount": 2308
     },
     {
         "code": "DE",
         "emoji": "🇩🇪",
         "unicode": "U+1F1E9 U+1F1EA",
         "name": "Germany",
-        "dialCode": "+49"
+        "otelCount": 5431
     },
     {
         "code": "DJ",
         "emoji": "🇩🇯",
         "unicode": "U+1F1E9 U+1F1EF",
         "name": "Djibouti",
-        "dialCode": "+253"
+        "otelCount": 8
     },
     {
         "code": "DK",
         "emoji": "🇩🇰",
         "unicode": "U+1F1E9 U+1F1F0",
         "name": "Denmark",
-        "dialCode": "+45"
+        "otelCount": 679
     },
     {
         "code": "DM",
         "emoji": "🇩🇲",
         "unicode": "U+1F1E9 U+1F1F2",
         "name": "Dominica",
-        "dialCode": "+1 767"
+        "otelCount": 16
     },
     {
         "code": "DO",
         "emoji": "🇩🇴",
         "unicode": "U+1F1E9 U+1F1F4",
         "name": "Dominican Republic",
-        "dialCode": "+1 849"
+        "otelCount": 494
     },
     {
         "code": "DZ",
         "emoji": "🇩🇿",
         "unicode": "U+1F1E9 U+1F1FF",
         "name": "Algeria",
-        "dialCode": "+213"
+        "otelCount": 107
     },
     {
         "code": "EC",
         "emoji": "🇪🇨",
         "unicode": "U+1F1EA U+1F1E8",
         "name": "Ecuador",
-        "dialCode": "+593"
+        "otelCount": 1065
     },
     {
         "code": "EE",
         "emoji": "🇪🇪",
         "unicode": "U+1F1EA U+1F1EA",
         "name": "Estonia",
-        "dialCode": "+372"
+        "otelCount": 270
     },
     {
         "code": "EG",
         "emoji": "🇪🇬",
         "unicode": "U+1F1EA U+1F1EC",
         "name": "Egypt",
-        "dialCode": "+20"
+        "otelCount": 565
     },
     {
         "code": "ES",
         "emoji": "🇪🇸",
         "unicode": "U+1F1EA U+1F1F8",
         "name": "Spain",
-        "dialCode": "+34"
+        "otelCount": 5325
     },
     {
         "code": "ET",
         "emoji": "🇪🇹",
         "unicode": "U+1F1EA U+1F1F9",
         "name": "Ethiopia",
-        "dialCode": "+251"
+        "otelCount": 164
     },
     {
         "code": "FI",
         "emoji": "🇫🇮",
         "unicode": "U+1F1EB U+1F1EE",
         "name": "Finland",
-        "dialCode": "+358"
+        "otelCount": 756
     },
     {
         "code": "FJ",
         "emoji": "🇫🇯",
         "unicode": "U+1F1EB U+1F1EF",
         "name": "Fiji",
-        "dialCode": "+679"
+        "otelCount": 47
     },
     {
         "code": "FO",
         "emoji": "🇫🇴",
         "unicode": "U+1F1EB U+1F1F4",
         "name": "Faroe Islands",
-        "dialCode": "+298"
+        "otelCount": 10
     },
     {
         "code": "FR",
         "emoji": "🇫🇷",
         "unicode": "U+1F1EB U+1F1F7",
         "name": "France",
-        "dialCode": "+33"
+        "otelCount": 5493
     },
     {
         "code": "GA",
         "emoji": "🇬🇦",
         "unicode": "U+1F1EC U+1F1E6",
         "name": "Gabon",
-        "dialCode": "+241"
+        "otelCount": 16
     },
     {
         "code": "GB",
         "emoji": "🇬🇧",
         "unicode": "U+1F1EC U+1F1E7",
         "name": "United Kingdom",
-        "dialCode": "+44"
+        "otelCount": 4268
     },
     {
         "code": "GE",
         "emoji": "🇬🇪",
         "unicode": "U+1F1EC U+1F1EA",
         "name": "Georgia",
-        "dialCode": "+995"
+        "otelCount": 1556
     },
     {
         "code": "GH",
         "emoji": "🇬🇭",
         "unicode": "U+1F1EC U+1F1ED",
         "name": "Ghana",
-        "dialCode": "+233"
+        "otelCount": 196
     },
     {
         "code": "GL",
         "emoji": "🇬🇱",
         "unicode": "U+1F1EC U+1F1F1",
         "name": "Greenland",
-        "dialCode": "+299"
+        "otelCount": 15
     },
     {
         "code": "GM",
         "emoji": "🇬🇲",
         "unicode": "U+1F1EC U+1F1F2",
         "name": "Gambia",
-        "dialCode": "+220"
+        "otelCount": 28
     },
     {
         "code": "GP",
         "emoji": "🇬🇵",
         "unicode": "U+1F1EC U+1F1F5",
         "name": "Guadeloupe",
-        "dialCode": "+590"
+        "otelCount": 69
     },
     {
         "code": "GR",
         "emoji": "🇬🇷",
         "unicode": "U+1F1EC U+1F1F7",
         "name": "Greece",
-        "dialCode": "+30"
+        "otelCount": 4510
     },
     {
         "code": "GU",
         "emoji": "🇬🇺",
         "unicode": "U+1F1EC U+1F1FA",
         "name": "Guam",
-        "dialCode": "+1 671"
+        "otelCount": 19
     },
     {
         "code": "GY",
         "emoji": "🇬🇾",
         "unicode": "U+1F1EC U+1F1FE",
         "name": "Guyana",
-        "dialCode": "+595"
+        "otelCount": 13
     },
     {
         "code": "HR",
         "emoji": "🇭🇷",
         "unicode": "U+1F1ED U+1F1F7",
         "name": "Croatia",
-        "dialCode": "+385"
+        "otelCount": 939
     },
     {
         "code": "HT",
         "emoji": "🇭🇹",
         "unicode": "U+1F1ED U+1F1F9",
         "name": "Haiti",
-        "dialCode": "+509"
+        "otelCount": 63
     },
     {
         "code": "HU",
         "emoji": "🇭🇺",
         "unicode": "U+1F1ED U+1F1FA",
         "name": "Hungary",
-        "dialCode": "+36"
+        "otelCount": 1122
     },
     {
         "code": "ID",
         "emoji": "🇮🇩",
         "unicode": "U+1F1EE U+1F1E9",
         "name": "Indonesia",
-        "dialCode": "+62"
+        "otelCount": 4000
     },
     {
         "code": "IE",
         "emoji": "🇮🇪",
         "unicode": "U+1F1EE U+1F1EA",
         "name": "Ireland",
-        "dialCode": "+353"
+        "otelCount": 760
     },
     {
         "code": "IL",
         "emoji": "🇮🇱",
         "unicode": "U+1F1EE U+1F1F1",
         "name": "Israel",
-        "dialCode": "+972"
+        "otelCount": 638
     },
     {
         "code": "IN",
         "emoji": "🇮🇳",
         "unicode": "U+1F1EE U+1F1F3",
         "name": "India",
-        "dialCode": "+91"
+        "otelCount": 4873
     },
     {
         "code": "IQ",
         "emoji": "🇮🇶",
         "unicode": "U+1F1EE U+1F1F6",
         "name": "Iraq",
-        "dialCode": "+964"
+        "otelCount": 67
     },
     {
         "code": "IS",
         "emoji": "🇮🇸",
         "unicode": "U+1F1EE U+1F1F8",
         "name": "Iceland",
-        "dialCode": "+354"
+        "otelCount": 185
     },
     {
         "code": "IT",
         "emoji": "🇮🇹",
         "unicode": "U+1F1EE U+1F1F9",
         "name": "Italy",
-        "dialCode": "+39"
+        "otelCount": 5967
     },
     {
         "code": "JM",
         "emoji": "🇯🇲",
         "unicode": "U+1F1EF U+1F1F2",
         "name": "Jamaica",
-        "dialCode": "+1 876"
+        "otelCount": 161
     },
     {
         "code": "JO",
         "emoji": "🇯🇴",
         "unicode": "U+1F1EF U+1F1F4",
         "name": "Jordan",
-        "dialCode": "+962"
+        "otelCount": 243
     },
     {
         "code": "JP",
         "emoji": "🇯🇵",
         "unicode": "U+1F1EF U+1F1F5",
         "name": "Japan",
-        "dialCode": "+81"
+        "otelCount": 4088
     },
     {
         "code": "KE",
         "emoji": "🇰🇪",
         "unicode": "U+1F1F0 U+1F1EA",
         "name": "Kenya",
-        "dialCode": "+254"
+        "otelCount": 615
     },
     {
         "code": "KG",
         "emoji": "🇰🇬",
         "unicode": "U+1F1F0 U+1F1EC",
         "name": "Kyrgyzstan",
-        "dialCode": "+996"
+        "otelCount": 120
     },
     {
         "code": "KH",
         "emoji": "🇰🇭",
         "unicode": "U+1F1F0 U+1F1ED",
         "name": "Cambodia",
-        "dialCode": "+855"
+        "otelCount": 743
     },
     {
         "code": "KN",
         "emoji": "🇰🇳",
         "unicode": "U+1F1F0 U+1F1F3",
         "name": "Saint Kitts and Nevis",
-        "dialCode": "+1 869"
+        "otelCount": 10
     },
     {
         "code": "KR",
         "emoji": "🇰🇷",
         "unicode": "U+1F1F0 U+1F1F7",
         "name": "South Korea",
-        "dialCode": "+82"
+        "otelCount": 1675
     },
     {
         "code": "KW",
         "emoji": "🇰🇼",
         "unicode": "U+1F1F0 U+1F1FC",
         "name": "Kuwait",
-        "dialCode": "+965"
+        "otelCount": 87
     },
     {
         "code": "KY",
         "emoji": "🇰🇾",
         "unicode": "U+1F1F0 U+1F1FE",
         "name": "Cayman Islands",
-        "dialCode": "+ 345"
+        "otelCount": 13
     },
     {
         "code": "KZ",
         "emoji": "🇰🇿",
         "unicode": "U+1F1F0 U+1F1FF",
         "name": "Kazakhstan",
-        "dialCode": "+7 7"
+        "otelCount": 487
     },
     {
         "code": "LB",
         "emoji": "🇱🇧",
         "unicode": "U+1F1F1 U+1F1E7",
         "name": "Lebanon",
-        "dialCode": "+961"
+        "otelCount": 137
     },
     {
         "code": "LC",
         "emoji": "🇱🇨",
         "unicode": "U+1F1F1 U+1F1E8",
         "name": "Saint Lucia",
-        "dialCode": "+1 758"
+        "otelCount": 31
     },
     {
         "code": "LI",
         "emoji": "🇱🇮",
         "unicode": "U+1F1F1 U+1F1EE",
         "name": "Liechtenstein",
-        "dialCode": "+423"
+        "otelCount": 22
     },
     {
         "code": "LK",
         "emoji": "🇱🇰",
         "unicode": "U+1F1F1 U+1F1F0",
         "name": "Sri Lanka",
-        "dialCode": "+94"
+        "otelCount": 1501
     },
     {
         "code": "LT",
         "emoji": "🇱🇹",
         "unicode": "U+1F1F1 U+1F1F9",
         "name": "Lithuania",
-        "dialCode": "+370"
+        "otelCount": 361
     },
     {
         "code": "LU",
         "emoji": "🇱🇺",
         "unicode": "U+1F1F1 U+1F1FA",
         "name": "Luxembourg",
-        "dialCode": "+352"
+        "otelCount": 181
     },
     {
         "code": "LV",
         "emoji": "🇱🇻",
         "unicode": "U+1F1F1 U+1F1FB",
         "name": "Latvia",
-        "dialCode": "+371"
+        "otelCount": 346
     },
     {
         "code": "LY",
         "emoji": "🇱🇾",
         "unicode": "U+1F1F1 U+1F1FE",
         "name": "Libya",
-        "dialCode": "+218"
+        "otelCount": 2
     },
     {
         "code": "MA",
         "emoji": "🇲🇦",
         "unicode": "U+1F1F2 U+1F1E6",
         "name": "Morocco",
-        "dialCode": "+212"
+        "otelCount": 872
     },
     {
         "code": "MC",
         "emoji": "🇲🇨",
         "unicode": "U+1F1F2 U+1F1E8",
         "name": "Monaco",
-        "dialCode": "+377"
+        "otelCount": 11
     },
     {
         "code": "MD",
         "emoji": "🇲🇩",
         "unicode": "U+1F1F2 U+1F1E9",
         "name": "Moldova",
-        "dialCode": "+373"
+        "otelCount": 115
     },
     {
         "code": "ME",
         "emoji": "🇲🇪",
         "unicode": "U+1F1F2 U+1F1EA",
         "name": "Montenegro",
-        "dialCode": "+382"
+        "otelCount": 370
     },
     {
         "code": "MF",
         "emoji": "🇲🇫",
         "unicode": "U+1F1F2 U+1F1EB",
         "name": "Saint Martin",
-        "dialCode": "+590"
+        "otelCount": 12
     },
     {
         "code": "MG",
         "emoji": "🇲🇬",
         "unicode": "U+1F1F2 U+1F1EC",
         "name": "Madagascar",
-        "dialCode": "+261"
+        "otelCount": 219
     },
     {
         "code": "MK",
         "emoji": "🇲🇰",
         "unicode": "U+1F1F2 U+1F1F0",
         "name": "North Macedonia",
-        "dialCode": "+389"
+        "otelCount": 236
     },
     {
         "code": "MM",
         "emoji": "🇲🇲",
         "unicode": "U+1F1F2 U+1F1F2",
         "name": "Myanmar",
-        "dialCode": "+95"
+        "otelCount": 711
     },
     {
         "code": "MN",
         "emoji": "🇲🇳",
         "unicode": "U+1F1F2 U+1F1F3",
         "name": "Mongolia",
-        "dialCode": "+976"
+        "otelCount": 53
     },
     {
         "code": "MQ",
         "emoji": "🇲🇶",
         "unicode": "U+1F1F2 U+1F1F6",
         "name": "Martinique",
-        "dialCode": "+596"
+        "otelCount": 51
     },
     {
         "code": "MT",
         "emoji": "🇲🇹",
         "unicode": "U+1F1F2 U+1F1F9",
         "name": "Malta",
-        "dialCode": "+356"
+        "otelCount": 169
     },
     {
         "code": "MU",
         "emoji": "🇲🇺",
         "unicode": "U+1F1F2 U+1F1FA",
         "name": "Mauritius",
-        "dialCode": "+230"
+        "otelCount": 108
     },
     {
         "code": "MV",
         "emoji": "🇲🇻",
         "unicode": "U+1F1F2 U+1F1FB",
         "name": "Maldives",
-        "dialCode": "+960"
+        "otelCount": 77
     },
     {
         "code": "MY",
         "emoji": "🇲🇾",
         "unicode": "U+1F1F2 U+1F1FE",
         "name": "Malaysia",
-        "dialCode": "+60"
+        "otelCount": 3054
     },
     {
         "code": "MZ",
         "emoji": "🇲🇿",
         "unicode": "U+1F1F2 U+1F1FF",
         "name": "Mozambique",
-        "dialCode": "+258"
+        "otelCount": 80
     },
     {
         "code": "NA",
         "emoji": "🇳🇦",
         "unicode": "U+1F1F3 U+1F1E6",
         "name": "Namibia",
-        "dialCode": "+264"
+        "otelCount": 75
     },
     {
         "code": "NG",
         "emoji": "🇳🇬",
         "unicode": "U+1F1F3 U+1F1EC",
         "name": "Nigeria",
-        "dialCode": "+234"
+        "otelCount": 544
     },
     {
         "code": "NI",
         "emoji": "🇳🇮",
         "unicode": "U+1F1F3 U+1F1EE",
         "name": "Nicaragua",
-        "dialCode": "+505"
+        "otelCount": 271
     },
     {
         "code": "NL",
         "emoji": "🇳🇱",
         "unicode": "U+1F1F3 U+1F1F1",
         "name": "Netherlands",
-        "dialCode": "+31"
+        "otelCount": 233
     },
     {
         "code": "NO",
         "emoji": "🇳🇴",
         "unicode": "U+1F1F3 U+1F1F4",
         "name": "Norway",
-        "dialCode": "+47"
+        "otelCount": 861
     },
     {
         "code": "NP",
         "emoji": "🇳🇵",
         "unicode": "U+1F1F3 U+1F1F5",
         "name": "Nepal",
-        "dialCode": "+977"
+        "otelCount": 491
     },
     {
         "code": "NU",
         "emoji": "🇳🇺",
         "unicode": "U+1F1F3 U+1F1FA",
         "name": "Niue",
-        "dialCode": "+683"
+        "otelCount": 1
     },
     {
         "code": "NZ",
         "emoji": "🇳🇿",
         "unicode": "U+1F1F3 U+1F1FF",
         "name": "New Zealand",
-        "dialCode": "+64"
+        "otelCount": 674
     },
     {
         "code": "OM",
         "emoji": "🇴🇲",
         "unicode": "U+1F1F4 U+1F1F2",
         "name": "Oman",
-        "dialCode": "+968"
+        "otelCount": 273
     },
     {
         "code": "PA",
         "emoji": "🇵🇦",
         "unicode": "U+1F1F5 U+1F1E6",
         "name": "Panama",
-        "dialCode": "+507"
+        "otelCount": 246
     },
     {
         "code": "PE",
         "emoji": "🇵🇪",
         "unicode": "U+1F1F5 U+1F1EA",
         "name": "Peru",
-        "dialCode": "+51"
+        "otelCount": 1496
     },
     {
         "code": "PF",
         "emoji": "🇵🇫",
         "unicode": "U+1F1F5 U+1F1EB",
         "name": "French Polynesia",
-        "dialCode": "+689"
+        "otelCount": 28
     },
     {
         "code": "PH",
         "emoji": "🇵🇭",
         "unicode": "U+1F1F5 U+1F1ED",
         "name": "Philippines",
-        "dialCode": "+63"
+        "otelCount": 2472
     },
     {
         "code": "PK",
         "emoji": "🇵🇰",
         "unicode": "U+1F1F5 U+1F1F0",
         "name": "Pakistan",
-        "dialCode": "+92"
+        "otelCount": 642
     },
     {
         "code": "PL",
         "emoji": "🇵🇱",
         "unicode": "U+1F1F5 U+1F1F1",
         "name": "Poland",
-        "dialCode": "+48"
+        "otelCount": 3200
     },
     {
         "code": "PR",
         "emoji": "🇵🇷",
         "unicode": "U+1F1F5 U+1F1F7",
         "name": "Puerto Rico",
-        "dialCode": "+1 939"
+        "otelCount": 158
     },
     {
         "code": "PS",
         "emoji": "🇵🇸",
         "unicode": "U+1F1F5 U+1F1F8",
         "name": "Palestinian Territory",
-        "dialCode": "+970"
+        "otelCount": 24
     },
     {
         "code": "PT",
         "emoji": "🇵🇹",
         "unicode": "U+1F1F5 U+1F1F9",
         "name": "Portugal",
-        "dialCode": "+351"
+        "otelCount": 2027
     },
     {
         "code": "PW",
         "emoji": "🇵🇼",
         "unicode": "U+1F1F5 U+1F1FC",
         "name": "Palau",
-        "dialCode": "+680"
+        "otelCount": 14
     },
     {
         "code": "PY",
         "emoji": "🇵🇾",
         "unicode": "U+1F1F5 U+1F1FE",
         "name": "Paraguay",
-        "dialCode": "+595"
+        "otelCount": 133
     },
     {
         "code": "QA",
         "emoji": "🇶🇦",
         "unicode": "U+1F1F6 U+1F1E6",
         "name": "Qatar",
-        "dialCode": "+974"
+        "otelCount": 116
     },
     {
         "code": "RO",
         "emoji": "🇷🇴",
         "unicode": "U+1F1F7 U+1F1F4",
         "name": "Romania",
-        "dialCode": "+40"
+        "otelCount": 1459
     },
     {
         "code": "RS",
         "emoji": "🇷🇸",
         "unicode": "U+1F1F7 U+1F1F8",
         "name": "Serbia",
-        "dialCode": "+381"
+        "otelCount": 532
     },
     {
         "code": "RU",
         "emoji": "🇷🇺",
         "unicode": "U+1F1F7 U+1F1FA",
         "name": "Russia",
-        "dialCode": "+7"
+        "otelCount": 5082
     },
     {
         "code": "SA",
         "emoji": "🇸🇦",
         "unicode": "U+1F1F8 U+1F1E6",
         "name": "Saudi Arabia",
-        "dialCode": "+966"
+        "otelCount": 2325
     },
     {
         "code": "SB",
         "emoji": "🇸🇧",
         "unicode": "U+1F1F8 U+1F1E7",
         "name": "Solomon Islands",
-        "dialCode": "+677"
+        "otelCount": 6
     },
     {
         "code": "SC",
         "emoji": "🇸🇨",
         "unicode": "U+1F1F8 U+1F1E8",
         "name": "Seychelles",
-        "dialCode": "+248"
+        "otelCount": 56
     },
     {
         "code": "SE",
         "emoji": "🇸🇪",
         "unicode": "U+1F1F8 U+1F1EA",
         "name": "Sweden",
-        "dialCode": "+46"
+        "otelCount": 1482
     },
     {
         "code": "SG",
         "emoji": "🇸🇬",
         "unicode": "U+1F1F8 U+1F1EC",
         "name": "Singapore",
-        "dialCode": "+65"
+        "otelCount": 366
     },
     {
         "code": "SI",
         "emoji": "🇸🇮",
         "unicode": "U+1F1F8 U+1F1EE",
         "name": "Slovenia",
-        "dialCode": "+386"
+        "otelCount": 356
     },
     {
         "code": "SM",
         "emoji": "🇸🇲",
         "unicode": "U+1F1F8 U+1F1F2",
         "name": "San Marino",
-        "dialCode": "+378"
+        "otelCount": 24
     },
     {
         "code": "SN",
         "emoji": "🇸🇳",
         "unicode": "U+1F1F8 U+1F1F3",
         "name": "Senegal",
-        "dialCode": "+221"
+        "otelCount": 141
     },
     {
         "code": "SV",
         "emoji": "🇸🇻",
         "unicode": "U+1F1F8 U+1F1FB",
         "name": "El Salvador",
-        "dialCode": "+503"
+        "otelCount": 133
     },
     {
         "code": "SX",
         "emoji": "🇸🇽",
         "unicode": "U+1F1F8 U+1F1FD",
-        "name": "St. Maarten"
+        "name": "St. Maarten",
+        "otelCount": 21
     },
     {
         "code": "TC",
         "emoji": "🇹🇨",
         "unicode": "U+1F1F9 U+1F1E8",
         "name": "Turks & Caicos Islands",
-        "dialCode": "+1 649"
+        "otelCount": 22
     },
     {
         "code": "TD",
         "emoji": "🇹🇩",
         "unicode": "U+1F1F9 U+1F1E9",
         "name": "Chad",
-        "dialCode": "+235"
+        "otelCount": 2
     },
     {
         "code": "TG",
         "emoji": "🇹🇬",
         "unicode": "U+1F1F9 U+1F1EC",
         "name": "Togo",
-        "dialCode": "+228"
+        "otelCount": 60
     },
     {
         "code": "TH",
         "emoji": "🇹🇭",
         "unicode": "U+1F1F9 U+1F1ED",
         "name": "Thailand",
-        "dialCode": "+66"
+        "otelCount": 4616
     },
     {
         "code": "TN",
         "emoji": "🇹🇳",
         "unicode": "U+1F1F9 U+1F1F3",
         "name": "Tunisia",
-        "dialCode": "+216"
+        "otelCount": 148
     },
     {
         "code": "TO",
         "emoji": "🇹🇴",
         "unicode": "U+1F1F9 U+1F1F4",
         "name": "Tonga",
-        "dialCode": "+676"
+        "otelCount": 8
     },
     {
         "code": "TT",
         "emoji": "🇹🇹",
         "unicode": "U+1F1F9 U+1F1F9",
         "name": "Trinidad and Tobago",
-        "dialCode": "+1 868"
+        "otelCount": 38
     },
     {
         "code": "TW",
         "emoji": "🇹🇼",
         "unicode": "U+1F1F9 U+1F1FC",
         "name": "Taiwan",
-        "dialCode": "+886"
+        "otelCount": 1893
     },
     {
         "code": "TZ",
         "emoji": "🇹🇿",
         "unicode": "U+1F1F9 U+1F1FF",
         "name": "Tanzania",
-        "dialCode": "+255"
+        "otelCount": 458
     },
     {
         "code": "UA",
         "emoji": "🇺🇦",
         "unicode": "U+1F1FA U+1F1E6",
         "name": "Ukraine",
-        "dialCode": "+380"
+        "otelCount": 2293
     },
     {
         "code": "UG",
         "emoji": "🇺🇬",
         "unicode": "U+1F1FA U+1F1EC",
         "name": "Uganda",
-        "dialCode": "+256"
+        "otelCount": 423
     },
     {
         "code": "US",
         "emoji": "🇺🇸",
         "unicode": "U+1F1FA U+1F1F8",
         "name": "United States of America",
-        "dialCode": "+1"
+        "otelCount": 4127
     },
     {
         "code": "UY",
         "emoji": "🇺🇾",
         "unicode": "U+1F1FA U+1F1FE",
         "name": "Uruguay",
-        "dialCode": "+598"
+        "otelCount": 463
     },
     {
         "code": "UZ",
         "emoji": "🇺🇿",
         "unicode": "U+1F1FA U+1F1FF",
         "name": "Uzbekistan",
-        "dialCode": "+998"
+        "otelCount": 355
     },
     {
         "code": "VC",
         "emoji": "🇻🇨",
         "unicode": "U+1F1FB U+1F1E8",
         "name": "Saint Vincent & Grenadines",
-        "dialCode": "+1 784"
+        "otelCount": 36
     },
     {
         "code": "VE",
         "emoji": "🇻🇪",
         "unicode": "U+1F1FB U+1F1EA",
         "name": "Venezuela",
-        "dialCode": "+58"
+        "otelCount": 81
     },
     {
         "code": "VI",
         "emoji": "🇻🇮",
         "unicode": "U+1F1FB U+1F1EE",
         "name": "U.S. Virgin Islands",
-        "dialCode": "+1 340"
+        "otelCount": 29
     },
     {
         "code": "VN",
         "emoji": "🇻🇳",
         "unicode": "U+1F1FB U+1F1F3",
         "name": "Vietnam",
-        "dialCode": "+84"
+        "otelCount": 4315
     },
     {
         "code": "VU",
         "emoji": "🇻🇺",
         "unicode": "U+1F1FB U+1F1FA",
         "name": "Vanuatu",
-        "dialCode": "+678"
+        "otelCount": 23
     },
     {
         "code": "XK",
         "emoji": "🇽🇰",
         "unicode": "U+1F1FD U+1F1F0",
         "name": "Kosovo",
-        "dialCode": "+383"
+        "otelCount": 104
     },
     {
         "code": "ZA",
         "emoji": "🇿🇦",
         "unicode": "U+1F1FF U+1F1E6", 
         "name": "South Africa",
-        "dialCode": "+27"
+        "otelCount": 1193
     },
     {
         "code": "",
         "emoji": "",
         "unicode": "",
         "name": "Tibet",
-        "dialCode": "+86"
+        "otelCount": 6
     },
     {
         "code": "LA",
         "emoji": "🇱🇦",
         "unicode": "U+1F1F1 U+1F1E6",
         "name": "Laos",
-        "dialCode": "+856"
+        "otelCount": 223
     },
     {
         "code": "BL",
         "emoji": "🇧🇱",
         "unicode": "U+1F1E7 U+1F1F1",
         "name": "Saint Barts",
-        "dialCode": "+590"
+        "otelCount": 11
     },
     {
         "code": "AO",
         "emoji": "🇦🇴",
         "unicode": "U+1F1E6 U+1F1F4",
         "name": "Angola",
-        "dialCode": "+244"
+        "otelCount": 19
     },
     {
         "code": "WS",
         "emoji": "🇼🇸",
         "unicode": "U+1F1FC U+1F1F8",
         "name": "Samoa",
-        "dialCode": "+685"
+        "otelCount": 12
     }
 ]

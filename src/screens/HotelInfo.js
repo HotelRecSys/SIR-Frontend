@@ -64,18 +64,8 @@ function HotelInfo({ route, navigation }) {
             </ScrollView>
 
           </Box>
-            
-   
-          
         </Box>
-
-       
-
-
-        
       </Box>
-     
-
   );
 }
 

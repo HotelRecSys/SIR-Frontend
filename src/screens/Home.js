@@ -3,17 +3,7 @@ import { ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, Box, CountryCard, Header, PredictCard } from "../components";
 import { connect } from 'react-redux';
-
-const countryList = [
-  { country: "Turkey", hotelCount: 150, image: "eifell" },
-  { country: "America", hotelCount: 1.4, image: "eifell" },
-  { country: "Rusia", hotelCount: 2.15, image: "eifell" },
-  { country: "England", hotelCount: 50, image: "eifell" },
-  { country: "China", hotelCount: 3.12, image: "eifell" },
-  { country: "France", hotelCount: 4.52, image: "eifell" },
-  { country: "Indonesia", hotelCount: 3.12, image: "eifell" },
-  { country: "Japonia", hotelCount: 4.52, image: "eifell" },
-];
+import countryList from '../countries.json';
 
 const predictData = [
   {
@@ -247,7 +237,6 @@ function Home({ navigation, user }) {
       flex={1}
       as={SafeAreaView}
       pt={10}
-      pb={5}
       px={10}
       forceInset={{ bottom: "never", vertical: "never" }}
     >

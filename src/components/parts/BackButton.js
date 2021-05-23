@@ -4,12 +4,16 @@ import { connect } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 import { Button } from '../index';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { clearHotel } from "../../store/otels";
 
 function BackButton(props) {
   const navigation = useNavigation();
 
   return (
-    <Button onPress={() => (navigation.goBack())} {...props} 
+    <Button onPress={() => {
+      navigation.goBack()
+      props.clearHotel()
+    }} {...props} 
     justifyContent="flex-start"
     alignItems="flex-end"
     pb={10}
@@ -25,4 +29,4 @@ function BackButton(props) {
 }
 const mapStateToProps = () => ({
 });
-export default connect(mapStateToProps, {  })(BackButton);
+export default connect(mapStateToProps, { clearHotel})(BackButton);
