@@ -13,19 +13,15 @@ const otels = createSlice({
   },
   reducers: {
     countryFilterRequest: (state) => {
-      console.log("LOADİNG")
       state.loading = true;
       state.error = null;
     },
     countryFilterReceive: (state, action) => {
-      console.log("PAYLOAD ",action.payload.length)
       state.otels = state.otels.concat(action.payload);
-      console.log(state.otels.length)
       state.loading = false;
       state.error = null;
     },
     countryFilterFailure: (state, action) => {
-      console.log("action", action.payload)
       state.loading = false;
       state.error =
         action.payload?.response?.response || action.payload.message;

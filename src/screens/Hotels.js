@@ -2,23 +2,27 @@ import React, {useEffect, useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, Box, HotelCard, BackButton, Header } from "../components";
 import { ScrollView, ActivityIndicator, FlatList} from "react-native";
-import { countryFilter } from "../store/otels";
+import { countryFilter, clearHotel } from "../store/otels";
 import { connect } from 'react-redux';
 
-let page = 0
 
-function Hotels({ route, navigation, countryFilter, data, loading }) {
+
+function Hotels({ route, navigation, countryFilter, clearHotel, data, loading }) {
   const { country, hotelCount } = route.params;
+  let page = 0
   const [refreshFooter, setrefreshFooter] = useState(false)
 
   useEffect(() => {
     if(page === 0){
-      console.log(page)
       countryFilter({'country': country, 'page': page})
     }
   }, [])
 
- 
+  useEffect(() => {
+    return () => {
+      clearHotel()
+    }
+  }, [])
 
   return (
     <Box
@@ -61,4 +65,4 @@ const mapStateToProps = ({ otels }) => ({
     loading: otels.loading
 });
 
-export default connect(mapStateToProps, {countryFilter})(Hotels);
+export default connect(mapStateToProps, {countryFilter, clearHotel})(Hotels);

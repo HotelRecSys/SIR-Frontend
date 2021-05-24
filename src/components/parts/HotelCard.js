@@ -32,8 +32,13 @@ function HotelCard({ item, navigation, hotelCount }) {
         justifyContent="flex-start"
         onPress={() =>
           navigation.navigate("HotelInfo", {
+            name: item.name,
+            city: item.city,
             country: item.country,
-            hotelCount: hotelCount,
+            score: item.score,
+            address: item.address,
+            properties: item.properties,
+            images: item.img
            })
          }
       >

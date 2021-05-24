@@ -12,18 +12,17 @@ function BackButton(props) {
   return (
     <Button onPress={() => {
       navigation.goBack()
-      props.clearHotel()
     }} {...props} 
     justifyContent="flex-start"
     alignItems="flex-end"
     pb={10}
    >
        <FontAwesomeIcon
-                  style={{ marginRight: 10,  }}
-                  icon={"chevron-left"}
-                  size={25}
-                  color={"#000"}
-                />
+        style={{ marginRight: 10,  }}
+        icon={"chevron-left"}
+        size={25}
+        color={props.iconColor || '#000'}
+      />
     </Button>
   );
 }

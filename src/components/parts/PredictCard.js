@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ImageBackground } from "react-native";
 import { height } from "styled-system";
 
-function PredictCard({ item }) {
+function PredictCard({ item,navigation }) {
   return (
     <Box
       mt={15}
@@ -15,12 +15,17 @@ function PredictCard({ item }) {
       <Button
         pb={0}
         justifyContent="flex-start"
-        // onPress={() =>
-        //   navigation.navigate("Hotels", {
-        //     country: item.country,
-        //     hotelCount: item.hotelCount,
-        //   })
-        // }
+        onPress={() =>
+          navigation.navigate("HotelInfo", {
+            name: item.name,
+            city: item.city,
+            country: item.country,
+            score: item.score,
+            address: item.address,
+            properties: item.properties,
+            images: item.img
+          })
+        }
       >
         <Box flexDirection="column" >
           {item && item.img && (

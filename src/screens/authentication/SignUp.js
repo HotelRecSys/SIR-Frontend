@@ -6,7 +6,7 @@ import {
   Button,
   BottomSheetArea,
 } from "../../components";
-import { Dimensions, Modal, StyleSheet, FlatList, TouchableOpacity, View } from "react-native";
+import { Dimensions, Modal, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import countryList from '../../countries.json';
 import { register } from "../../store/auth";
@@ -137,9 +137,9 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
                   renderItem={({ item }) => (
                     <TouchableOpacity
                       onPress={() => { setCountry({ ...country, name: item.name, flag: item.emoji, code: item.code }), setModalVisible(!modalVisible) }}>
-                      <View>
+                      <Box>
                         <Text style={styles.modalText}>{item.emoji} {item.name}</Text>
-                      </View>
+                      </Box>
                     </TouchableOpacity>
                   )}
                 />
