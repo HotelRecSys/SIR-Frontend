@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan, apiCallFailed, apiCallSuccess } from "./api";
+import {API_URL} from '../config/api.json';
+
 import axios from "axios";
 
 const authentication = createSlice({
@@ -65,7 +67,7 @@ export const {
 
 export const login = (userData)  => 
   apiCallBegan({
-    url: "http://0.0.0.0:5000/login",
+    url: `${API_URL}/login`,
     data: userData,
     onStart: loginRequest.type,
     onSuccess: loginReceive.type,
@@ -74,7 +76,7 @@ export const login = (userData)  =>
 
 export const logout = () =>
   apiCallBegan({
-    url: "http://0.0.0.0:5000/logout",
+    url: `${API_URL}/logout`,
     method: 'GET',
     onSuccess: logoutReceive.type,
     onError: logoutError.type
@@ -82,7 +84,7 @@ export const logout = () =>
 
 export const register = (userData)  => 
   apiCallBegan({
-    url: "http://0.0.0.0:5000/register",
+    url: `${API_URL}/register`,
     data: userData,
     onStart: registerRequest.type,
     onSuccess: registerReceive.type,

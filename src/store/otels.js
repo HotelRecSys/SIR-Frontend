@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCallBegan, apiCallFailed, apiCallSuccess } from "./api";
+import {API_URL} from '../config/api.json';
 import axios from "axios";
 
 const otels = createSlice({
@@ -24,6 +25,7 @@ const otels = createSlice({
       state.error = null;
     },
     countryFilterFailure: (state, action) => {
+      console.log("action", action.payload)
       state.loading = false;
       state.error =
         action.payload?.response?.response || action.payload.message;
@@ -44,7 +46,7 @@ export const {
 
 export const countryFilter = (countryData)  => 
   apiCallBegan({
-    url: "http://0.0.0.0:5000/country-filter",
+    url: `${API_URL}/country-filter`,
     data: countryData,
     onStart: countryFilterRequest.type,
     onSuccess: countryFilterReceive.type,

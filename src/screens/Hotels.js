@@ -30,7 +30,7 @@ function Hotels({ route, navigation, countryFilter, data, loading }) {
     
     <Header isBackButton={true} title={country} subtitle={`Let explore the ${hotelCount} hotels at ${country}`}/>
       <Box flex={1} mx={15}>
-        <ScrollView>
+        {/* <ScrollView> */}
           <FlatList
               data={data}
               renderItem={({item, index}) => <HotelCard item={item} hotelCount={hotelCount} key={index} navigation={navigation}/>}
@@ -38,18 +38,18 @@ function Hotels({ route, navigation, countryFilter, data, loading }) {
               ListFooterComponent={
                 loading && <ActivityIndicator style={{color: '#000'}} />
               }
-              onEndReachedThreshold={0.7}
+              onEndReachedThreshold={0.5}
               onEndReached={() => {
-                  console.log("PAGE", page)
-                  page = page+1 
-                  if(data.length !== hotelCount){
+                  if(!loading && data.length !== hotelCount){
+                    page = page+1 
                     countryFilter({'country': country, 'page': page})
                   }
+                 
               }}
           />
 
           {/* {data && !loading && data.map((item, index) => <HotelCard item={item} hotelCount={hotelCount} key={index} navigation={navigation} />)} */}
-        </ScrollView>
+        {/* </ScrollView> */}
       </Box>
     </Box>
   );
