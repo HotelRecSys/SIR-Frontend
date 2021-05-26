@@ -16,7 +16,7 @@ function Router({ isLoggedIn, user }) {
   return (
       
     <Stack.Navigator headerMode="none">
-      {isLoggedIn && user ? (
+      {!isLoggedIn && !user ? (
         <>
         {/* kullanıcı girisi olmadıgında gozukecek componentler buraya eklenıcek */}
           <Stack.Screen name="SplashScreen" component={SplashScreen} />

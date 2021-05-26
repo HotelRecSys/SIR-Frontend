@@ -27,7 +27,7 @@ const authentication = createSlice({
     loginFailure: (state, action) => {
       state.loading = false;
       state.error =
-        action.payload?.response?.response || action.payload.message;
+        action.payload?.response?.message || action.payload.message;
     },
     logoutReceive: (state) => {
       state.user = null;
@@ -49,7 +49,7 @@ const authentication = createSlice({
     registerFailure: (state, action) => {
       state.loading = false;
       state.error =
-        action.payload?.response || action.payload;
+        action.payload?.response.message || action.payload.message;
     },
   },
 });

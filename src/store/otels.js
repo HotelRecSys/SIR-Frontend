@@ -24,7 +24,7 @@ const otels = createSlice({
     countryFilterFailure: (state, action) => {
       state.loading = false;
       state.error =
-        action.payload?.response?.response || action.payload.message;
+        action.payload?.response?.message || action.payload.message;
     },
     otelReceive: (state) => {
       state.otels = []
