@@ -8,7 +8,7 @@ import {
 } from "../../components";
 import { Dimensions, Modal, StyleSheet, FlatList, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import countryList from '../../countries.json';
+import countryList from '../../user-countries.json';
 import { register } from "../../store/auth";
 import { connect } from 'react-redux';
 

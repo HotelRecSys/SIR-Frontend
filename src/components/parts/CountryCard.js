@@ -35,8 +35,8 @@ function CountryCard({item, navigation}) {
         <Box flexDirection="row">
           {item && (
             <Image
-              source={require('../../../assets/countries/eifell.png')}
-              style={{ width: 65, height: 65, borderRadius: 10 }}
+              source={{ uri: item.photo}}
+              style={{ width: 65, height: 65, borderRadius: 10}}
             />
           )}
           <Box flexDirection="column" ml={15} justifyContent={"center"} flex={1}>

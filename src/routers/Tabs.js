@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Text, Box } from "../components";
-import { Home, Profile, SignIn, SignUp } from "../screens";
+import { Home, Profile, SignIn, SignUp, Search, Top} from "../screens";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const Tab = createBottomTabNavigator();
@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 function TabNavigator({ visible }) {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Home" 
       tabBarVisible={visible}
       //kendi tabbarımızı duzenlemek ıstersek
       // tabBar={(props) => (visible ? <TabBar {...props} /> : null)}
@@ -21,13 +21,13 @@ function TabNavigator({ visible }) {
           if (route.name === "Home") {
             iconName = "home";
             color = focused ? "#FFF" : "#C6C2CB";
-          } else if (route.name === "SignIn") {
+          } else if (route.name === "Search") {
             iconName = "user-circle";
             color = focused ? "#FFF" : "#C6C2CB";
           } else if (route.name === "Profile") {
             iconName = "user-circle";
             color = focused ? "#FFF" : "#C6C2CB";
-          } else if (route.name === "SignUp") {
+          } else if (route.name === "Top") {
             iconName = "user-circle";
             color = focused ? "#FFF" : "#C6C2CB";
           }
@@ -72,8 +72,8 @@ function TabNavigator({ visible }) {
       }}
     >
       <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="SignIn" component={SignUp} />
-      <Tab.Screen name="SignUp" component={SignIn} />
+      <Tab.Screen name="Search" component={Search} />
+      <Tab.Screen name="Top" component={Top} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
