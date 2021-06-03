@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import BottomSheet from "reanimated-bottom-sheet";
-import { BackHandler, Dimensions } from "react-native";
+import { BackHandler, Dimensions,Platform,KeyboardAvoidingView } from "react-native";
 import { Box } from "..";
 
 const { height } = Dimensions.get("window");
@@ -46,6 +46,9 @@ function BottomSheetArea({
     );
 
   return (
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+  >
     <Box height={height}>
       <BottomSheet
         ref={sheetRef}
@@ -61,6 +64,7 @@ function BottomSheetArea({
         onCloseEnd={onCloseEnd}
       />
     </Box>
+    </KeyboardAvoidingView>
   );
 }
 

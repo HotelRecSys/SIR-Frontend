@@ -131,6 +131,7 @@ function SignIn({ isOpen, setOpen, setSignUpOpen, login}) {
   );}
 
   return (
+    
     <BottomSheetArea
       sheetRef={sheetRef}
       snapPoints={["70%", "35%", "0"]}

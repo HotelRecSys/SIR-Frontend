@@ -9,7 +9,7 @@ function SplashScreen({ navigation }) {
   const [signUpOpen, setSignUpOpen] = useState(false);
 
   return (
-    <Box flex={1} flexDirection={"column"}>
+    <Box flex={1} as={SafeAreaView} flexDirection={"column"}>
       <ImageBackground
         source={require("../../../assets/background2.png")}
         style={{

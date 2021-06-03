@@ -22,13 +22,13 @@ function TabNavigator({ visible }) {
             iconName = "home";
             color = focused ? "#FFF" : "#C6C2CB";
           } else if (route.name === "Search") {
-            iconName = "user-circle";
+            iconName = "search";
             color = focused ? "#FFF" : "#C6C2CB";
           } else if (route.name === "Profile") {
-            iconName = "user-circle";
+            iconName = "user";
             color = focused ? "#FFF" : "#C6C2CB";
           } else if (route.name === "Top") {
-            iconName = "user-circle";
+            iconName = "star";
             color = focused ? "#FFF" : "#C6C2CB";
           }
 
