@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { ImageBackground } from "react-native";
 
 function HotelCard({ item, navigation, hotelCount }) {
-
   const images = item.img.split('\n')
 
   return (

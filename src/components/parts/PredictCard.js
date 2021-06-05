@@ -45,9 +45,9 @@ function PredictCard({ item,navigation }) {
                   style={{ marginRight: 5 }}
                   icon={"map-marker-alt"}
                   size={15}
-                  color={"#295BE0"}
+                  color={"#5A65B3"}
                 />
-                <Text fontSize={14} color="#295BE0">
+                <Text fontSize={14} color="#5A65B3">
                   {item.country}
                 </Text>
               </Box>

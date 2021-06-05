@@ -35,7 +35,7 @@ function TabNavigator({ visible }) {
           // You can return any component that you like here!
           return (
             <Box
-              bg={focused ? "#295BE0" : "#FFF"}
+              bg={focused ? "#191B32" : "#FFF"}
               p={10}
               style={{ borderRadius: 50 }}
             >

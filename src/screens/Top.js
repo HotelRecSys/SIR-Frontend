@@ -2,26 +2,18 @@ import React, {useEffect, useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, Box, HotelCard, BackButton, Header } from "../components";
 import { ScrollView, ActivityIndicator, FlatList} from "react-native";
-import { countryFilter, clearHotel } from "../store/otels";
+import { getTopHotels } from "../store/otels";
 import { connect } from 'react-redux';
 
 
 
-function Top({ route, navigation, countryFilter, data, loading, clearHotel }) {
+function Top({ route, navigation, data, loading, getTopHotels }) {
   let page = 0
   const [refreshFooter, setrefreshFooter] = useState(false)
 
   useEffect(() => {
-    if(page === 0){
-      countryFilter({'country': 'Faroe Islands Hotels', 'page': page})
-    }
+    getTopHotels()
   }, []);
-
-  useEffect(() => {
-    return () => {
-      clearHotel()
-    }
-  }, [])
 
   return (
     <Box
@@ -35,22 +27,15 @@ function Top({ route, navigation, countryFilter, data, loading, clearHotel }) {
           subtitle={`Explore the hotels that peoples liked.`}
         />
    <Box flex={1} mx={15}>
+    
         {/* <ScrollView> */}
           <FlatList
               data={data}
               renderItem={({item, index}) => <HotelCard item={item} hotelCount={10} key={index} navigation={navigation}/>}
-              nestedScrollEnabled={true}
               ListFooterComponent={
                 loading && <ActivityIndicator style={{color: '#000'}} />
               }
-              onEndReachedThreshold={0.5}
-              onEndReached={() => {
-                  if(!loading && data.length !== hotelCount){
-                    page = page+1 
-                    countryFilter({'country': 'Faroe Islands Hotels', 'page': page})
-                  }
-                 
-              }}
+              nestedScrollEnabled={true}
           />
 
           {/* {data && !loading && data.map((item, index) => <HotelCard item={item} hotelCount={hotelCount} key={index} navigation={navigation} />)} */}
@@ -62,8 +47,8 @@ function Top({ route, navigation, countryFilter, data, loading, clearHotel }) {
 
 
 const mapStateToProps = ({ otels }) => ({
-    data: otels.otels,
+    data: otels.topHotels,
     loading: otels.loading
 });
 
-export default connect(mapStateToProps, {countryFilter, clearHotel})(Top);
+export default connect(mapStateToProps, {getTopHotels})(Top);
