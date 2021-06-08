@@ -37,7 +37,7 @@ function BottomSheetArea({
               width: 40,
               height: 8,
               borderRadius: 4,
-              backgroundColor: "#295BE0",
+              backgroundColor: "#191B32",
               marginBottom: 10,
             }}
           />

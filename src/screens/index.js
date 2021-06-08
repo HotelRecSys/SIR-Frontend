@@ -6,4 +6,5 @@ export { default as SignUp } from './authentication/SignUp';
 export { default as SplashScreen } from './authentication/SplashScreen';
 export { default as HotelInfo } from './HotelInfo';
 export { default as Search } from './Search';
-export { default as  Top} from './Top';
+export { default as Top } from './Top';
+export { default as Filter } from './Filter';
