@@ -60,6 +60,20 @@ const otels = createSlice({
       state.error =
         action.payload?.response?.message || action.payload.message;
     },
+    filterRequest: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    filterReceive: (state, action) => {
+      state.searchedHotels = action.payload;
+      state.loading = false;
+      state.error = null;
+    },
+    filterFailure: (state, action) => {
+      state.loading = false;
+      state.error =
+        action.payload?.response?.message || action.payload.message;
+    },
   },
 });
 export default otels.reducer;
@@ -73,7 +87,10 @@ export const {
     topHotelsFailure,
     searchRequest,
     searchReceive,
-    searchFailure
+    searchFailure,
+    filterRequest,
+    filterReceive,
+    filterFailure
 } = otels.actions;
 
 export const countryFilter = (countryData)  => 
@@ -105,3 +122,13 @@ export const search = (searchWord)  =>
     onSuccess: searchReceive.type,
     onError: searchFailure.type,
 });
+
+export const filter = (filters)  => 
+  apiCallBegan({
+    url: `${API_URL}/filter`,
+    data: filters,
+    onStart: filterRequest.type,
+    onSuccess: filterReceive.type,
+    onError: filterFailure.type,
+});
+
