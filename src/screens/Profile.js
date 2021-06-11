@@ -9,7 +9,7 @@ import { logout } from "../store/auth";
 import { connect } from 'react-redux';
 
 
-function Profile({logout}) {
+function Profile({logout, user}) {
   const items = [
     {
       name:'Simge Tiraş',
@@ -39,9 +39,9 @@ function Profile({logout}) {
           /> 
       </Box>
       <Box style ={styles.mytext}>
-          <Title style= {{textAlign:'center'}}>{items[0].name} </Title>
-          <Text style={{marginTop:10}}>{<FontAwesomeIcon icon="map-marker-alt" size={24} color="#A9B9CD" />} {items[0].location}</Text>
-          <Text style={{marginTop:10}}>{<FontAwesomeIcon icon="envelope-open" size={24} color="#A9B9CD"/>} {items[0].email}</Text>
+          <Title style= {{textAlign:'center'}}>{user?.name || items[0].name} </Title>
+          <Text style={{marginTop:10}}>{<FontAwesomeIcon icon="map-marker-alt" size={24} color="#A9B9CD" />} {user?.country || items[0].location}</Text>
+          <Text style={{marginTop:10}}>{<FontAwesomeIcon icon="envelope-open" size={24} color="#A9B9CD"/>} {user?.email || items[0].email}</Text>
       </Box>
           
     
@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = ({ authentication }) => ({
   isLoggedIn: true,
+  user: authentication.user
 });
 
 export default connect(mapStateToProps, {logout})(Profile);
