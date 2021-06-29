@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import { Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, Box, BackButton } from "../components";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import Star from "react-native-star-view";
+
 import {
   Dimensions,
   FlatList,
@@ -13,9 +12,11 @@ import {
 } from "react-native";
 import ImageViewer from "react-native-image-zoom-viewer";
 import { Rating } from "react-native-ratings";
+import { clickout } from "../store/otels";
+import { connect } from 'react-redux';
 
-function HotelInfo({ route, navigation }) {
-  const { name, city, country, score, address, properties, images } =
+function HotelInfo({ route, clickout, user}) {
+  const { id, name, city, country, score, address, properties, images } =
     route.params;
   const { height } = Dimensions.get("window");
 
@@ -24,6 +25,10 @@ function HotelInfo({ route, navigation }) {
   img = img.slice(0, -1);
   const [modalImage, setModalImage] = useState(0);
   const [modalVisible, setModalVisible] = useState("");
+
+  useEffect(() => {
+    clickout({'item_id': id, 'user_id': user?.id})
+  }, [])
 
   var result = img.map((item) => ({ url: item }));
 
@@ -59,7 +64,7 @@ function HotelInfo({ route, navigation }) {
           >
             {name}
           </Text>
-          <Box flexDirection="row" p={10}>
+          <Box flexDirection="row" p={10} style={{width:150}}>
             <FontAwesomeIcon icon="map-marker-alt" size={20} color="#5A65B3" />
             <Text
               style={{
@@ -69,6 +74,7 @@ function HotelInfo({ route, navigation }) {
                 fontWeight: "200",
                 color: "#595864",
               }}
+              numberOfLines={2}
             >
               {city}, {country}
             </Text>
@@ -207,4 +213,8 @@ function HotelInfo({ route, navigation }) {
   );
 }
 
-export default HotelInfo;
+const mapStateToProps = ({ authentication }) => ({
+  user : authentication.user,
+});
+
+export default connect(mapStateToProps, {clickout})(HotelInfo);

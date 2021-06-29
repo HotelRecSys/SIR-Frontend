@@ -11,7 +11,7 @@ function SplashScreen({ navigation }) {
   return (
     <Box flex={1} flexDirection={"column"}>
       <ImageBackground
-        source={require("../../../assets/background2.png")}
+        source={require("../../../assets/5.jpeg")}
         style={{
           flex: 1,
           resizeMode: "cover",
@@ -38,17 +38,19 @@ function SplashScreen({ navigation }) {
           <>
             <Text
               ml={20}
-              fontSize={30}
+              mb={15}
+              fontSize={60}
               color="#FFF"
-              fontWeight={"bold"}>
-              {"SIR HOTELS APP"}
+              fontWeight={"bold"}
+              fontFamily={"BodoniSvtyTwoITCTT-Bold"}>
+              {"SIR"}
             </Text>
             <Box flexDirection="row" justifyContent="space-between">
               <Button
                 m={15}
                 p={15}
                 width={"40%"}
-                style={{ borderRadius: 25, borderWidth: 1.5, borderColor: "#e6ffff" }}
+                style={{ borderRadius: 25, borderWidth: 1, borderColor: "#e6ffff", backgroundColor: "rgba(255,255,255,0.3)"}}
                 onPress={() => setSignInOpen(true)}
               >
                 <Text color="#FFF" fontSize={15} fontWeight="bold">
@@ -60,7 +62,7 @@ function SplashScreen({ navigation }) {
                 p={15}
                 width={"40%"}
                 style={{
-                  borderRadius: 25, borderWidth: 1.5, borderColor: "#e6ffff"
+                  borderRadius: 25, borderWidth: 1, borderColor: "#e6ffff",backgroundColor: "rgba(255,255,255,0.3)"
                 }}
                 onPress={() => setSignUpOpen(true)}
               >

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { Text, Box, Input, Button, BottomSheetArea } from "../../components";
 import {
-  Text,
-  Box,
-  Input,
-  Button,
-  BottomSheetArea,
-} from "../../components";
-import { Dimensions, Modal, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+  Dimensions,
+  Modal,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import countryList from '../../user-countries.json';
+import countryList from "../../user-countries.json";
 import { register } from "../../store/auth";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 const { height } = Dimensions.get("window");
 
@@ -18,9 +18,7 @@ const sheetRef = React.createRef();
 const inputPassRef = React.createRef(null);
 const emailRef = React.createRef(null);
 
-function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
-
-
+function SignUp({ isOpen, setOpen, setSignInOpen, register, navigation, message }) {
   useEffect(() => {
     sheetRef.current.snapTo(0);
   }, [isOpen]);
@@ -28,9 +26,9 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
   const Content = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [name, setName] = useState("")
+    const [name, setName] = useState("");
     const [modalVisible, setModalVisible] = useState(false);
-    const [country, setCountry] = useState({ name: "", flag: "", code: "" })
+    const [country, setCountry] = useState({ name: "", flag: "", code: "" });
 
     const [emailError, setEmailError] = useState({
       renderErrorMessage: false,
@@ -46,10 +44,10 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
         <Box mb={35}>
           <Text mb={10} fontSize={20} color="#191B32" fontWeight="bold">
             Create an account
-        </Text>
+          </Text>
           <Text fontSize={15} color="#AFA5AD" fontWeight={500}>
             Start to explore hotels with us
-        </Text>
+          </Text>
         </Box>
         <Box flexDirection="row" alignItems="center">
           <Input
@@ -116,12 +114,19 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
           />
         </Box>
 
-        <Text style={{ marginTop: 20, padding: 10, fontSize: 13, fontWeight: 'bold', color: "#A9B9CD", }}>
+        <Text
+          style={{
+            marginTop: 20,
+            padding: 10,
+            fontSize: 13,
+            fontWeight: "bold",
+            color: "#A9B9CD",
+          }}
+        >
           Country
-      </Text>
+        </Text>
 
         <Box>
-
           <Modal
             animationType="fade"
             transparent={true}
@@ -136,9 +141,20 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
                   data={countryList}
                   renderItem={({ item }) => (
                     <TouchableOpacity
-                      onPress={() => { setCountry({ ...country, name: item.name, flag: item.emoji, code: item.code }), setModalVisible(!modalVisible) }}>
+                      onPress={() => {
+                        setCountry({
+                          ...country,
+                          name: item.name,
+                          flag: item.emoji,
+                          code: item.code,
+                        }),
+                          setModalVisible(!modalVisible);
+                      }}
+                    >
                       <Box>
-                        <Text style={styles.modalText}>{item.emoji} {item.name}</Text>
+                        <Text style={styles.modalText}>
+                          {item.emoji} {item.name}
+                        </Text>
                       </Box>
                     </TouchableOpacity>
                   )}
@@ -148,37 +164,55 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
           </Modal>
           <Button
             style={{
-              backgroundColor: "#fff", borderColor: "#DCE5EE", borderBottomWidth: 1, justifyContent: "flex-start",
-              paddingBottom: 15, marginTop: 5, marginLeft: 10, marginRight: 10
+              backgroundColor: "#fff",
+              borderColor: "#DCE5EE",
+              borderBottomWidth: 1,
+              justifyContent: "flex-start",
+              paddingBottom: 15,
+              marginTop: 5,
+              marginLeft: 10,
+              marginRight: 10,
             }}
             onPress={() => setModalVisible(true)}
           >
-            {<FontAwesomeIcon icon="globe-americas" size={20} color="#A9B9CD" />}
-            {country.name == '' ?
+            {
+              <FontAwesomeIcon
+                icon="globe-americas"
+                size={20}
+                color="#A9B9CD"
+              />
+            }
+            {country.name == "" ? (
               <Text color="#191B32" pl={20} fontSize={13}>
                 {"Ex: Germany"}
               </Text>
-              :
+            ) : (
               <Text color="#191B32" pl={20} fontSize={16} fontWeight={500}>
                 {country.name} {country.flag}
               </Text>
-            }
+            )}
           </Button>
-
         </Box>
 
         <Button
           mt={20}
-          bg="#295BE0"
+          bg="#191B32"
           py={15}
-          style={{ borderColor: "#295BE0", borderRadius: 10 }}
-          onPress={() => register({
-            'name': name,
-            'password': password,
-            'country': country.name,
-            'email': email,
-            'image': 'profile.jpeg'
-          })}
+          style={{ borderColor: "#191B32", borderRadius: 10 }}
+          onPress={() => {
+            register({
+              name: name,
+              password: password,
+              country: country.name,
+              email: email,
+              image: "profile.jpeg",
+            });
+
+            if (message) {
+              setOpen(false);
+              setSignInOpen(true);
+            }
+          }}
         >
           <Text color="#FFF" fontSize={15} fontWeight={500}>
             {"Sign Up"}
@@ -195,28 +229,27 @@ function SignUp({ isOpen, setOpen, setSignInOpen, register }) {
             bg="#FFF"
             py={12}
             px={35}
-            style={{ borderColor: "#295BE0", borderWidth: 1, borderRadius: 10 }}
+            style={{ borderColor: "#191B32", borderWidth: 1, borderRadius: 10 }}
             onPress={() => {
               setOpen(false);
               setSignInOpen(true);
             }}
           >
-            <Text color="#295BE0" fontSize={15} fontWeight={500}>
-              {"Login"}
+            <Text color="#191B32" fontSize={15} fontWeight={500}>
+              {"Sign In"}
             </Text>
           </Button>
         </Box>
-
       </Box>
     );
-  }
+  };
   return (
     <BottomSheetArea
       sheetRef={sheetRef}
       snapPoints={["70%", "35%", "0"]}
       onCloseEnd={() => {
-        setOpen(false)
-        setSignInOpen(false)
+        setOpen(false);
+        setSignInOpen(false);
       }}
       // header={BottomSheetFilterHeader}
       // headerStyle={{
@@ -233,7 +266,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: 'rgba(0,0,0,0.6)'
+    backgroundColor: "rgba(0,0,0,0.6)",
   },
   modalView: {
     backgroundColor: "#fff",
@@ -242,26 +275,25 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
     elevation: 5,
-    width: '75%',
-    height: '75%',
-
+    width: "75%",
+    height: "75%",
   },
   modalText: {
     marginBottom: 15,
-    fontWeight: '300',
+    fontWeight: "300",
     letterSpacing: 0.25,
     fontSize: 18,
-  }
+  },
 });
 
 const mapStateToProps = ({ authentication }) => ({
   isLoggedIn: true,
+  message: authentication.message,
 });
 
-export default connect(mapStateToProps, {register})(SignUp);
-
+export default connect(mapStateToProps, { register })(SignUp);

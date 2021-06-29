@@ -9,6 +9,7 @@ const otels = createSlice({
     otels: [],
     topHotels: [],
     searchedHotels: [],
+    predictedHotels: [],
     loading: false,
     error: null,
     message: null,
@@ -30,7 +31,8 @@ const otels = createSlice({
     },
     otelReceive: (state) => {
       state.otels = []
-      state.searchedHotels =[] 
+      state.searchedHotels = [] 
+      state.predictedHotels = []
     },
     topHotelsRequest: (state) => {
       state.loading = true;
@@ -74,6 +76,21 @@ const otels = createSlice({
       state.error =
         action.payload?.response?.message || action.payload.message;
     },
+    clickRequest: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    clickReceive: (state, action) => {
+
+      state.predictedHotels = action.payload;
+      state.loading = false;
+      state.error = null;
+    },
+    clickFailure: (state, action) => {
+      state.loading = false;
+      state.error =
+        action.payload?.response?.message || action.payload.message;
+    },
   },
 });
 export default otels.reducer;
@@ -90,7 +107,10 @@ export const {
     searchFailure,
     filterRequest,
     filterReceive,
-    filterFailure
+    filterFailure,
+    clickReceive,
+    clickRequest,
+    clickFailure
 } = otels.actions;
 
 export const countryFilter = (countryData)  => 
@@ -130,5 +150,14 @@ export const filter = (filters)  =>
     onStart: filterRequest.type,
     onSuccess: filterReceive.type,
     onError: filterFailure.type,
+});
+
+export const clickout = (click)  => 
+  apiCallBegan({
+    url: `${API_URL}/clickout`,
+    data: click,
+    onStart: clickRequest.type,
+    onSuccess: clickReceive.type,
+    onError: clickFailure.type,
 });
 

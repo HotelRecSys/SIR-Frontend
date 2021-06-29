@@ -31,6 +31,7 @@ function HotelCard({ item, navigation, hotelCount }) {
         justifyContent="flex-start"
         onPress={() =>
           navigation.navigate("HotelInfo", {
+            id: item.item_id,
             name: item.name,
             city: item.city,
             country: item.country,

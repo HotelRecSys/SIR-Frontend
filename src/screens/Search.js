@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import {
-  Text,
   Box,
   HotelCard,
   Header,
   Button,
-  Input,
-  BottomSheetArea,
 } from "../components";
 import { ActivityIndicator, FlatList } from "react-native";
 import { search, clearHotel } from "../store/otels";

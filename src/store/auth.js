@@ -19,7 +19,7 @@ const authentication = createSlice({
       state.error = null;
     },
     loginReceive: (state, action) => {
-      state.user = action.payload.user;
+      state.user = action.payload;
       state.loading = false;
       state.error = null;
       state.isLoggedIn = true;
@@ -51,6 +51,20 @@ const authentication = createSlice({
       state.error =
         action.payload?.response.message || action.payload.message;
     },
+    updateRequest: (state) => {
+      state.loading = true;
+      state.error = null;
+    },
+    updateReceive: (state, action) => {
+      state.message = action.payload;
+      state.loading = false;
+      state.error = null;
+    },
+    updateFailure: (state, action) => {
+      state.loading = false;
+      state.error =
+        action.payload?.response.message || action.payload.message;
+    },
   },
 });
 export default authentication.reducer;
@@ -63,6 +77,9 @@ export const {
   registerFailure,
   registerReceive,
   registerRequest,
+  updateRequest,
+  updateReceive,
+  updateFailure
 } = authentication.actions;
 
 export const login = (userData)  => 
@@ -89,4 +106,13 @@ export const register = (userData)  =>
     onStart: registerRequest.type,
     onSuccess: registerReceive.type,
     onError: registerFailure.type,
+  });
+
+  export const update = (userData)  => 
+  apiCallBegan({
+    url: `${API_URL}/update`,
+    data: userData,
+    onStart: updateRequest.type,
+    onSuccess: updateReceive.type,
+    onError: updateFailure.type,
   });

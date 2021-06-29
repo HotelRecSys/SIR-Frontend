@@ -14,16 +14,14 @@ import Router from "./src/routers";
 import store from "./src/store";
 import theme from "./src/config/theme";
 
-// iconları buraya ekleyip daha sonra FontAwesomeIcon olarak kullanıyoruz.
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faUserCircle, faHome, faAt, faLock, faKey, faEye, faEyeSlash, faChevronRight, faMapMarkerAlt, faChevronLeft, faUser, faGlobeAmericas, faEnvelope, faEnvelopeOpen, faSearch, faStar, faHotel, faCrown, faSlidersH } from '@fortawesome/free-solid-svg-icons'
-library.add(fab, faUserCircle, faHome, faAt, faLock, faKey,faEye, faEyeSlash,faChevronRight,faMapMarkerAlt,faChevronLeft,faUser,faGlobeAmericas,faEnvelope,  faEnvelopeOpen,faSearch, faStar, faHotel, faCrown,faSlidersH )
+import { faUserCircle, faHome, faAt, faLock, faKey, faEye, faEyeSlash, faChevronRight, faMapMarkerAlt, faChevronLeft, faUser, faGlobeAmericas, faEnvelope, faEnvelopeOpen, faSearch, faStar, faHotel, faCrown, faSlidersH, faUserEdit } from '@fortawesome/free-solid-svg-icons'
+library.add(fab, faUserCircle, faHome, faAt, faLock, faKey,faEye, faEyeSlash,faChevronRight,faMapMarkerAlt,faChevronLeft,faUser,faGlobeAmericas,faEnvelope,  faEnvelopeOpen,faSearch, faStar, faHotel, faCrown,faSlidersH, faUserEdit  )
 
 export default function App() {
   return (
     <Provider store={store}>
-      {/* klavyeyi herhangi bir yere tıklayınca dismiss etmek için */}
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <KeyboardAvoidingView
           style={{ flex: 1 }}

@@ -7,6 +7,8 @@ import { ImageBackground } from "react-native";
 import { height } from "styled-system";
 
 function PredictCard({ item,navigation }) {
+
+  const img = item.img.split("\n");
   return (
     <Box
       mt={15}
@@ -17,6 +19,7 @@ function PredictCard({ item,navigation }) {
         justifyContent="flex-start"
         onPress={() =>
           navigation.navigate("HotelInfo", {
+            id: item.item_id,
             name: item.name,
             city: item.city,
             country: item.country,
@@ -30,17 +33,17 @@ function PredictCard({ item,navigation }) {
         <Box flexDirection="column" >
           {item && item.img && (
               <Image
-                source={{ uri: item.img }}
+                source={{ uri: img[0] }}
                 style={{ height: 120, width:120,  borderRadius: 20, left: 0, right: 0 }}
                 resizeMode="cover"
               />
           )}
           <Box flexDirection="row"  mt={5} alignItems={"center"} style={{width:120}}>
-            <Box flexDirection="column" justifyContent={"center"} >
-              <Text fontSize={18} color="#191B32" fontWeight="bold" numberOfLines={2}>
+            <Box flexDirection="column" justifyContent={"space-between"}  style={{height:80}}>
+              <Text fontSize={18} color="#191B32"  justifyContent={"flex-start"}  fontWeight="bold" numberOfLines={2}>
                 {item.name}
               </Text>
-              <Box flexDirection="row" mt={3}  pb={15}>
+              <Box flexDirection="row" mt={3} pb={15}  >
                 <FontAwesomeIcon
                   style={{ marginRight: 5 }}
                   icon={"map-marker-alt"}

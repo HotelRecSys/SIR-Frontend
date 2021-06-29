@@ -98,9 +98,9 @@ function SignIn({ isOpen, setOpen, setSignUpOpen, login}) {
       </Box>
       <Button
         mt={30}
-        bg="#295BE0"
+        bg="#191B32"
         py={15}
-        style={{ borderColor: "#295BE0", borderRadius: 10 }}
+        style={{ borderColor: "#191B32", borderRadius: 10 }}
         onPress={() => login(values)}
       >
         <Text color="#FFF" fontSize={15} fontWeight={500}>
@@ -117,13 +117,13 @@ function SignIn({ isOpen, setOpen, setSignUpOpen, login}) {
         mt={20}
         bg="#FFF"
         py={15}
-        style={{ borderColor: "#295BE0", borderWidth: 1, borderRadius: 10 }}
+        style={{ borderColor: "#191B32", borderWidth: 1, borderRadius: 10 }}
         onPress={() => {
           setOpen(false);
           setSignUpOpen(true);
         }}
       >
-        <Text color="#295BE0" fontSize={15} fontWeight={500}>
+        <Text color="#191B32"fontSize={15} fontWeight={500}>
           {"Sign Up"}
         </Text>
       </Button>
@@ -134,7 +134,7 @@ function SignIn({ isOpen, setOpen, setSignUpOpen, login}) {
     
     <BottomSheetArea
       sheetRef={sheetRef}
-      snapPoints={["70%", "35%", "0"]}
+      snapPoints={["55%", "35%", "0"]}
       onCloseEnd={() => setOpen(false)}
       // header={BottomSheetFilterHeader}
       // headerStyle={{
